@@ -1,3 +1,9 @@
+Install VirtualBox and Vagrant : 
+
+```
+sudo aptitude install virtualbox vagrant
+```
+
 At project root, execute :
 
 ```
