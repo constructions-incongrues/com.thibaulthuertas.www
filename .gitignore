@@ -1,3 +1,4 @@
+/.vagrant
 # dist files
 
 
@@ -7,3 +8,19 @@
 # abt
 /etc/*
 !/etc/common
+!/etc/puppet
+
+# symfony2 (@see https://github.com/github/gitignore/blob/master/Symfony2.gitignore)
+# -- Bootstrap
+/src/src/app/bootstrap*
+
+# -- Symfony directories
+/src/src/vendor/*
+/src/src/*/logs/*
+/src/src/*/cache/*
+/src/src/web/uploads/*
+/src/src/web/bundles/*
+
+# -- Configuration files
+/src/src/app/config/parameters.ini
+/src/src/app/config/parameters.yml

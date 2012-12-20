@@ -15,7 +15,7 @@ class com::thibaulthuertas::www {
   #   require => Package['mysql-server']
   # }
 
-  package { ["apache2", "libapache2-mod-php5", "php5-cli", "php5-mysqlnd", "php-apc", "vim-tiny", "mysql-server"]:
+  package { ["apache2", "libapache2-mod-php5", "php5-cli", "php5-mysqlnd", "php-apc", "php5-intl", "vim-tiny", "mysql-server"]:
     ensure => present,
   }
 
@@ -41,6 +41,14 @@ class com::thibaulthuertas::www {
     source => "puppet:///vagrant_puppet_files/etc/apache2/envvars",
     require => Package["apache2"],
   }
+
+  file { '/etc/php5/conf.d/9900-local.ini':
+    ensure => present,
+    source => "puppet:///vagrant_puppet_files/etc/php5/conf.d/9900-local.ini",
+    require => Package["apache2"],
+    notify => Service['apache2'],
+  }
+
 }
 
 include com::thibaulthuertas::www
