@@ -1,6 +1,8 @@
+# vagrant
 /.vagrant
-# dist files
 
+# dist files
+/src/app/config/parameters.yml
 
 # composer
 /vendor/*
@@ -15,12 +17,8 @@
 /src/src/app/bootstrap*
 
 # -- Symfony directories
-/src/src/vendor/*
-/src/src/*/logs/*
-/src/src/*/cache/*
-/src/src/web/uploads/*
-/src/src/web/bundles/*
-
-# -- Configuration files
-/src/src/app/config/parameters.ini
-/src/src/app/config/parameters.yml
+/src/vendor/*
+/src/*/logs/*
+/src/*/cache/*
+/src/web/uploads/*
+/src/web/bundles/*
