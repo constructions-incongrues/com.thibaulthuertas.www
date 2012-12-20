@@ -14,7 +14,7 @@
 
 # symfony2 (@see https://github.com/github/gitignore/blob/master/Symfony2.gitignore)
 # -- Bootstrap
-/src/src/app/bootstrap*
+/src/app/bootstrap*
 
 # -- Symfony directories
 /src/vendor/*
