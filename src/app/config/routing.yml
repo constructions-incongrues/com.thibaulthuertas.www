@@ -1,3 +1,7 @@
+_welcome:
+    pattern:  /
+    defaults: { _controller: ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:index }
+
 constructions_incongrues_com_thibault_huertas_www:
     resource: "@ConstructionsIncongruesComThibaultHuertasWwwBundle/Controller/"
     type:     annotation
