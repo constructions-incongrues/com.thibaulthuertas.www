@@ -10,7 +10,7 @@ Clone project :
 git clone git@github.com:constructions-incongrues/com.thibaulthuertas.www.git
 ```
 
-Setup VM
+Setup VM :
 
 ```
 cd com.thibaulthuertas.www
