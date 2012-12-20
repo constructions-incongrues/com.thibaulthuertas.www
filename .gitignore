@@ -1,0 +1,9 @@
+# dist files
+
+
+# composer
+/vendor/*
+
+# abt
+/etc/*
+!/etc/common
