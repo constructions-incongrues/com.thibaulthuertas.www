@@ -26,7 +26,9 @@ class AppKernel extends Kernel
             new Sonata\CacheBundle\SonataCacheBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
-
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+ 
             // Site bundle
             new ConstructionsIncongrues\ComThibaultHuertasWwwBundle\ConstructionsIncongruesComThibaultHuertasWwwBundle(),
         );

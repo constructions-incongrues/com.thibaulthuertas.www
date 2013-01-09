@@ -1,5 +1,5 @@
 {
-    "hash": "0246e6af1d8a9b96f8e045cfa37648ee",
+    "hash": "1d748af0ffb2df2c2d0bb525d63d7d9d",
     "packages": [
         {
             "name": "doctrine/common",
@@ -537,7 +537,7 @@
         },
         {
             "name": "knplabs/knp-menu",
-            "version": "v1.1.2",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "http://github.com/KnpLabs/KnpMenu.git",
@@ -545,7 +545,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/KnpLabs/KnpMenu/zipball/v1.1.2",
+                "url": "https://github.com/KnpLabs/KnpMenu/archive/v1.1.2.zip",
                 "reference": "v1.1.2",
                 "shasum": ""
             },
@@ -562,14 +562,14 @@
                 "silex/silex": "for the integration with your silex application",
                 "twig/twig": "for the TwigRenderer and the integration with your templates"
             },
-            "time": "2012-06-10 09:20:40",
+            "time": "2012-06-10 16:20:40",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.1.x-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Knp\\Menu\\": "src/"
@@ -602,26 +602,26 @@
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v1.1.0",
+            "version": "1.1.x-dev",
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
                 "url": "http://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "v1.1.0"
+                "reference": "520d4d923c5a542f4aebeafe4b1301dddc8689c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle/zipball/v1.1.0",
-                "reference": "v1.1.0",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle/archive/520d4d923c5a542f4aebeafe4b1301dddc8689c8.zip",
+                "reference": "520d4d923c5a542f4aebeafe4b1301dddc8689c8",
                 "shasum": ""
             },
             "require": {
                 "knplabs/knp-menu": "1.1.*",
-                "symfony/framework-bundle": ">=2.0,<2.2-dev"
+                "symfony/framework-bundle": ">=2.0,<2.3-dev"
             },
-            "time": "2012-05-17 04:56:49",
+            "time": "2012-11-28 20:05:09",
             "type": "symfony-bundle",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Knp\\Bundle\\MenuBundle": ""
@@ -656,12 +656,12 @@
             "source": {
                 "type": "git",
                 "url": "http://github.com/kriswallsmith/assetic.git",
-                "reference": "ba1905e51390a87c325fd59defd4ccab2eca1576"
+                "reference": "ed261d505b49ed5ff14c03cfbd7aa26e824a0a45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/kriswallsmith/assetic/archive/ba1905e51390a87c325fd59defd4ccab2eca1576.zip",
-                "reference": "ba1905e51390a87c325fd59defd4ccab2eca1576",
+                "url": "https://github.com/kriswallsmith/assetic/archive/ed261d505b49ed5ff14c03cfbd7aa26e824a0a45.zip",
+                "reference": "ed261d505b49ed5ff14c03cfbd7aa26e824a0a45",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
                 "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
             },
-            "time": "2013-01-09 14:18:45",
+            "time": "2013-01-09 19:51:38",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1790,6 +1790,8 @@
         "sonata-project/cache-bundle": 20,
         "sonata-project/block-bundle": 20,
         "sonata-project/jquery-bundle": 20,
-        "sonata-project/exporter": 20
+        "sonata-project/exporter": 20,
+        "knplabs/knp-menu-bundle": 20,
+        "knplabs/knp-menu": 20
     }
 }
