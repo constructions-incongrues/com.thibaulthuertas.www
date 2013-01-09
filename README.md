@@ -4,9 +4,16 @@ Install VirtualBox and Vagrant :
 sudo aptitude install virtualbox vagrant
 ```
 
-At project root, execute :
+Clone project :
 
 ```
+git clone git@github.com:constructions-incongrues/com.thibaulthuertas.www.git
+```
+
+Setup VM :
+
+```
+cd com.thibaulthuertas.www
 vagrant up
 ```
 
