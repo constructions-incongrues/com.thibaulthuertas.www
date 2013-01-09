@@ -3,6 +3,7 @@
 namespace ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Project
@@ -36,12 +37,19 @@ class Project
     private $description;
 
     /**
-     * @var array
-     *
-     * @ORM\Column(name="images", type="array")
+     * @ORM\OneToMany(targetEntity="Image", mappedBy="project", cascade={"persist"})
      */
-    private $images;
+    protected $images;
 
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
 
     /**
      * Get id
@@ -102,7 +110,7 @@ class Project
     /**
      * Set images
      *
-     * @param array $images
+     * @param ArrayCollection $images
      * @return Project
      */
     public function setImages($images)
@@ -115,10 +123,15 @@ class Project
     /**
      * Get images
      *
-     * @return array 
+     * @return ArrayCollection
      */
     public function getImages()
     {
         return $this->images;
+    }
+
+    public function addImage($image)
+    {
+        $this->images[] = $image;
     }
 }

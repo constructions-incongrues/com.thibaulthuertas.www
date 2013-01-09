@@ -7,35 +7,28 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class ProjectAdmin extends Admin
+class ImageAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('title', null, array('required' => true))
-            ->add('description', null, array('required' => true))
-            ->add(
-            	'images', 
-            	'sonata_type_collection', 
-            	array('required' => false), 
-            	array('edit' => 'inline','inline' => 'table','targetEntity'=>'ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image')
-            )
+            ->add('path', null, array('required' => true))
+            ->add('project', null, array('by_reference' => true))
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('title')
-            ->add('description')
+            ->add('path')
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('title')
-            ->add('description')
+            ->addIdentifier('path')
+            ->add('project')
         ;
     }
 }

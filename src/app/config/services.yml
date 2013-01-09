@@ -1,0 +1,16 @@
+services:
+   constructionsincongrues.comthibaulthuertas.admin.project:
+      class: ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Admin\ProjectAdmin
+      arguments: [ null, ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Project, SonataAdminBundle:CRUD ]
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Website, label: Project }
+      calls: 
+        - [setTranslationDomain, [ConstructionsIncongruesComThibaultHuertasWwwBundle]]
+
+   constructionsincongrues.comthibaulthuertas.admin.image:
+      class: ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Admin\ImageAdmin
+      arguments: [ null, ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image, SonataAdminBundle:CRUD ]
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Website, label: Image }
+      calls: 
+        - [setTranslationDomain, [ConstructionsIncongruesComThibaultHuertasWwwBundle]]
