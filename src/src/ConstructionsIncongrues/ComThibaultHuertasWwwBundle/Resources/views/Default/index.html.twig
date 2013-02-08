@@ -3,12 +3,12 @@
 {% block content %}
 <div class="content1_content" id="projects">
 
-{% for project in projects %}
+  {% for project in projects %}
   <div class="grid_6 column{% if loop.index0 is divisibleby(2) %}1{% else %}2{% endif %}">
     <ul > 
       <li class="mosaic-block fade">
         <span class=" mosaic-overlay"> 
-          <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
+          <a href="{{ path('project_show', {slug: project.slug}) }}#project" title="En savoir plus sur le projet {{ project.title }}">
             <span class="details">    
               <h1>{{ project.title }}</h1>
               <hr />
@@ -22,7 +22,7 @@
       </li>
     </ul>
   </div>  
-{% endfor %}
+  {% endfor %}
 
 </div><!-- .content1_content -->
 {% endblock %}
