@@ -3,6 +3,7 @@
 namespace ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Finder\Finder;
 
 /**
  * Project
@@ -29,6 +30,20 @@ class Project
      */
     private $slug;
 
+    /**
+     * @var string
+     */
+    private $hover;
+
+    /**
+     * @var string
+     */
+    private $credits;
+
+    /**
+     * @var \DateTime
+     */
+    private $date_released;
 
     /**
      * Get id
@@ -108,11 +123,6 @@ class Project
     {
         return $this->slug;
     }
-    /**
-     * @var string
-     */
-    private $credits;
-
 
     /**
      * Set credits
@@ -136,11 +146,6 @@ class Project
     {
         return $this->credits;
     }
-    /**
-     * @var \DateTime
-     */
-    private $date_released;
-
 
     /**
      * Set date_released
@@ -163,5 +168,73 @@ class Project
     public function getDateReleased()
     {
         return $this->date_released;
+    }
+
+    /**
+     * Set hover
+     *
+     * @param string $hover
+     * @return Project
+     */
+    public function setHover($hover)
+    {
+        $this->hover = $hover;
+    
+        return $this;
+    }
+
+    /**
+     * Get hover
+     *
+     * @return string 
+     */
+    public function getHover()
+    {
+        return $this->hover;
+    }
+
+    /**
+     * Returns project's related images.
+     *
+     * @return Symfony\Component\Finder\Finder
+     */ 
+    public function getImages()
+    {
+        $finder = new Finder();
+        $images = $finder
+            ->files()
+            ->notName('*_home.jpg')
+            ->sortByName()
+            ->in(__DIR__.'/../Resources/public/assets/projects/'.$this->getSlug());
+
+        return $images;
+    }
+    /**
+     * @var boolean
+     */
+    private $is_enabled;
+
+
+    /**
+     * Set is_enabled
+     *
+     * @param boolean $isEnabled
+     * @return Project
+     */
+    public function setIsEnabled($isEnabled)
+    {
+        $this->is_enabled = $isEnabled;
+    
+        return $this;
+    }
+
+    /**
+     * Get is_enabled
+     *
+     * @return boolean 
+     */
+    public function getIsEnabled()
+    {
+        return $this->is_enabled;
     }
 }

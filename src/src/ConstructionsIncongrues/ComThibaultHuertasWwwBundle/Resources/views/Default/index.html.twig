@@ -1,23 +1,23 @@
-{% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::layout.html.twig' %}
+{% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::Default/layout.html.twig' %}
 
 {% block content %}
-<div class="content1_content">
+<div class="content1_content" id="projects">
 
 {% for project in projects %}
   <div class="grid_6 column{% if loop.index0 is divisibleby(2) %}1{% else %}2{% endif %}">
     <ul > 
       <li class="mosaic-block fade">
-        <span class="mosaic-backdrop">
-          <a href="" title="">
-            <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/img/home.jpg') }}" alt="" />
-          </a> 
-        </span>
         <span class=" mosaic-overlay"> 
-          <span class="details">    
-            <h1>{{ project.title }}</h1>
-            <hr />
-            <h2>By Build Internet</h2>
-          </span>
+          <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
+            <span class="details">    
+              <h1>{{ project.title }}</h1>
+              <hr />
+              <h2>{{ project.hover }}</h2>
+            </span>
+          </a>
+        </span>
+        <span class="mosaic-backdrop">
+          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.jpg') }}" />
         </span>
       </li>
     </ul>

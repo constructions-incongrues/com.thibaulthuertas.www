@@ -1,6 +1,7 @@
 ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Project:
     type: entity
     table: Project
+    repositoryClass: ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\ProjectRepository
     fields:
         id:
             id: true
@@ -23,4 +24,9 @@ ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Project:
             type: string
         date_released:
             type: date
+        hover:
+            type: text
+        is_enabled:
+            type: boolean
+            nullable: true
     lifecycleCallbacks: {  }
