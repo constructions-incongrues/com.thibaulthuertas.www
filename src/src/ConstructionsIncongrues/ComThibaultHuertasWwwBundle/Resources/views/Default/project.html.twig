@@ -31,12 +31,12 @@
 
   <h1>{{ project.title }}</h1>
   <p class="details_content_p_big">
-    {{ project.description }}
+    {{ project.description|converturls }}
   </p>
 
   <hr />
   <p class="details_content_p_slim">
-    {{ project.credits|nl2br }}
+    {{ project.credits|nl2br|converturls }}
   </p>  
 
   <hr class="details_content_padding_first_pics" /> 

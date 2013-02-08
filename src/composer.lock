@@ -1,5 +1,5 @@
 {
-    "hash": "6995dccce1d73fc6f6cb50563021d066",
+    "hash": "2d279476e109a3c50b255bf5429a8a1e",
     "packages": [
         {
             "name": "doctrine/common",
@@ -815,6 +815,52 @@
                 "assets",
                 "compression",
                 "minification"
+            ]
+        },
+        {
+            "name": "liip/url-auto-converter-bundle",
+            "version": "dev-master",
+            "target-dir": "Liip/UrlAutoConverterBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/liip/LiipUrlAutoConverterBundle.git",
+                "reference": "47b2eec007be64b883ac3ec526941ca8231b9f01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liip/LiipUrlAutoConverterBundle/zipball/47b2eec007be64b883ac3ec526941ca8231b9f01",
+                "reference": "47b2eec007be64b883ac3ec526941ca8231b9f01",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0,<2.2-dev",
+                "twig/twig": " >=1.0,<2.0-dev"
+            },
+            "time": "2012-06-28 10:02:31",
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Liip\\UrlAutoConverterBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/liip/LiipThemeBundle/contributors"
+                },
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                }
+            ],
+            "description": "This bundle adds a Twig Extension with a filter for automatically converting urls and emails in a string to html links",
+            "keywords": [
+                "url"
             ]
         },
         {
@@ -1835,6 +1881,7 @@
         "knplabs/knp-menu-bundle": 20,
         "knplabs/knp-menu": 20,
         "doctrine/data-fixtures": 20,
-        "doctrine/doctrine-fixtures-bundle": 20
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "liip/url-auto-converter-bundle": 20
     }
 }

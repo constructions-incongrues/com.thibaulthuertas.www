@@ -32,6 +32,9 @@ class AppKernel extends Kernel
             // Doctrine bundles
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
+            // Twig bundles
+            new Liip\UrlAutoConverterBundle\LiipUrlAutoConverterBundle(),
+
             // Site bundle
             new ConstructionsIncongrues\ComThibaultHuertasWwwBundle\ConstructionsIncongruesComThibaultHuertasWwwBundle(),
         );
