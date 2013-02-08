@@ -3,53 +3,32 @@
 namespace ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Project
- *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\ProjectRepository")
  */
 class Project
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="description", type="text")
      */
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity="Image", mappedBy="project", cascade={"persist"})
+     * @var string
      */
-    protected $images;
+    private $slug;
 
-    public function __construct()
-    {
-        $this->images = new ArrayCollection();
-    }
-
-    public function __toString()
-    {
-        return $this->getTitle();
-    }
 
     /**
      * Get id
@@ -108,30 +87,81 @@ class Project
     }
 
     /**
-     * Set images
+     * Set slug
      *
-     * @param ArrayCollection $images
+     * @param string $slug
      * @return Project
      */
-    public function setImages($images)
+    public function setSlug($slug)
     {
-        $this->images = $images;
+        $this->slug = $slug;
+        
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    /**
+     * @var string
+     */
+    private $credits;
+
+
+    /**
+     * Set credits
+     *
+     * @param string $credits
+     * @return Project
+     */
+    public function setCredits($credits)
+    {
+        $this->credits = $credits;
     
         return $this;
     }
 
     /**
-     * Get images
+     * Get credits
      *
-     * @return ArrayCollection
+     * @return string 
      */
-    public function getImages()
+    public function getCredits()
     {
-        return $this->images;
+        return $this->credits;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $date_released;
+
+
+    /**
+     * Set date_released
+     *
+     * @param \DateTime $dateReleased
+     * @return Project
+     */
+    public function setDateReleased($dateReleased)
+    {
+        $this->date_released = $dateReleased;
+    
+        return $this;
     }
 
-    public function addImage($image)
+    /**
+     * Get date_released
+     *
+     * @return \DateTime 
+     */
+    public function getDateReleased()
     {
-        $this->images[] = $image;
+        return $this->date_released;
     }
 }

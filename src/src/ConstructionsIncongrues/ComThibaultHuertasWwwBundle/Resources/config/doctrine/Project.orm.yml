@@ -1,0 +1,26 @@
+ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Project:
+    type: entity
+    table: Project
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        title:
+            type: string
+            fixed: false
+            nullable: false
+        description:
+            type: text
+            nullable: false
+        credits:
+            type: text
+            nullable: false
+        slug:
+            type: string
+        date_released:
+            type: date
+    lifecycleCallbacks: {  }

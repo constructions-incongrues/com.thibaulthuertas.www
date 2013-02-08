@@ -18,7 +18,7 @@ class ProjectAdmin extends Admin
             	'images', 
             	'sonata_type_collection', 
             	array('required' => false), 
-            	array('edit' => 'inline','inline' => 'table','targetEntity'=>'ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image')
+            	array('edit' => 'inline', 'inline' => 'table', 'targetEntity'=>'ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image')
             )
         ;
     }

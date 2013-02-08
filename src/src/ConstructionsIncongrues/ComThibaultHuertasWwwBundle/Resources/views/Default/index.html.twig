@@ -1,1 +1,28 @@
-HUERTAS!
+{% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="content1_content">
+
+{% for project in projects %}
+  <div class="grid_6 column{% if loop.index0 is divisibleby(2) %}1{% else %}2{% endif %}">
+    <ul > 
+      <li class="mosaic-block fade">
+        <span class="mosaic-backdrop">
+          <a href="" title="">
+            <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/img/home.jpg') }}" alt="" />
+          </a> 
+        </span>
+        <span class=" mosaic-overlay"> 
+          <span class="details">    
+            <h1>{{ project.title }}</h1>
+            <hr />
+            <h2>By Build Internet</h2>
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>  
+{% endfor %}
+
+</div><!-- .content1_content -->
+{% endblock %}
