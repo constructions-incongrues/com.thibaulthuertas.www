@@ -1,28 +1,54 @@
 {% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::Default/layout.html.twig' %}
 
+{% block navbar_class_homepage %}navbar_active{% endblock %}
+
+{% block caillou %}
+      <div class="grid_12 home caillou">
+        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/home/1.png') }}" alt="" />
+      </div>
+{% endblock %}
+
 {% block content %}
 <div class="content1_content" id="projects">
 
   {% for project in projects %}
-  <div class="grid_6 column{% if loop.index0 is divisibleby(2) %}1{% else %}2{% endif %}">
-    <ul > 
+
+    {% if loop.index0 == 0 %}
+  <div class="grid_6 column1">
+    <ul >
+    {% elseif loop.index0 == (loop.length // 2) %}
+    </ul>
+  </div>
+  <div class="grid_6 column2">
+    <ul >
+    {% endif %}
+
       <li class="mosaic-block fade">
-        <span class=" mosaic-overlay"> 
-          <a href="{{ path('project_show', {slug: project.slug}) }}#project" title="En savoir plus sur le projet {{ project.title }}">
+        <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
+          <span class="mosaic-overlay"> 
             <span class="details">    
               <h1>{{ project.title }}</h1>
               <hr />
               <h2>{{ project.hover }}</h2>
             </span>
-          </a>
-        </span>
+          </span>
+        </a>
         <span class="mosaic-backdrop">
-          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.jpg') }}" />
+          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
         </span>
       </li>
+    {% if loop.index == loop.length + 2 %}
     </ul>
-  </div>  
+  </div>
+    {% endif %}
   {% endfor %}
-
 </div><!-- .content1_content -->
+</div>
+
+<script>
+$('.caillou').height(document.body.clientHeight - 64);
+$(window).resize(function() {
+  $('.caillou').height(document.body.clientHeight - 64);
+});
+</script>
 {% endblock %}

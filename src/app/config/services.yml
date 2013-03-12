@@ -6,11 +6,3 @@ services:
         - { name: sonata.admin, manager_type: orm, group: Website, label: Project }
       calls: 
         - [setTranslationDomain, [ConstructionsIncongruesComThibaultHuertasWwwBundle]]
-
-   constructionsincongrues.comthibaulthuertas.admin.image:
-      class: ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Admin\ImageAdmin
-      arguments: [ null, ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image, SonataAdminBundle:CRUD ]
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: Website, label: Image }
-      calls: 
-        - [setTranslationDomain, [ConstructionsIncongruesComThibaultHuertasWwwBundle]]

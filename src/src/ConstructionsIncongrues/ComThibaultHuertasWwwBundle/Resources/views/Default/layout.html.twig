@@ -11,10 +11,11 @@
     {% block title %}{% endblock %}
     Thibault Huertas | Designer Graphique
   </title>
-	<meta name="description" content="">
+	<meta name="description" content="Designer graphique indépendant basé à Paris">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <link rel="icon" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/favicon.png') }}" />
 
   <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/reset.css') }}"/>
   <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/text.css') }}"/>
@@ -25,10 +26,10 @@
   
 	<script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/modernizr-2.0.6.min.js') }}"></script>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/mosaic.1.0.1.js') }}"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/mosaic.1.0.1.js') }}"></script>
     
-<script type="text/javascript">  
+  <script type="text/javascript">
       
       jQuery(function($){
         
@@ -69,23 +70,14 @@
         });
         
         });
-        
     </script>
 </head>
 <body>
 
-
 <div class="container_12" id="top">
-
-
-    <div class="grid_12 header">
-
-      
+    <div class="grid_12 header {% block header_class %}{% endblock %}">
       <div class="header_content">
-
-
-
-    <div class="grid_8 logo">
+        <div class="grid_8 logo">
       <p>
         <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
           <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" />
@@ -94,15 +86,14 @@
 
       <div class="grid_4 navbar">
         <ul>
-          <li class="navbar_active"><a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
-          <li><a href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
-          <li><a href="about.html" title="">Contact</a></li>
+          <li class="{% block navbar_class_homepage %}{% endblock %}"><a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
+          <li class="{% block navbar_class_projects %}{% endblock %}"><a href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
+          <li class="{% block navbar_class_contact %}{% endblock %}"><a href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
         </ul> 
       </div><!-- .navbar -->
       <div class="clear"> </div>
-      <div class="grid_12 home">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/home/1.png') }}" alt="" />
-      </div>
+      {% block caillou %}
+      {% endblock %}
 
 </div> <!-- .header_content -->
 </div><!-- .header -->
@@ -116,16 +107,16 @@
 <div class="grid_12 footer">
 
   <div class="footer_content">
-                        <p class="footer_content_mail"><a href="mailto:contact@thibaulthuertas.com" title"">contact@thibaulthuertas.com</a></p>
-                        <p class="footer_content_phone">+ 33.6.10.68.41.33</p>
-                        <ul class="footer_icon">
-                          <li> <a href="" title=""><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/facebook.png') }}" alt="" /></a></li>
-                          <li> <a href="" title=""><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="" /></a></li>
-                          <li> <a href="" title=""><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/behance.png') }}" alt="" /></a></li>
-                        </ul>
-                      </div><!-- .footer -->
-                    </div><!-- .footer_content -->
-                    </div><!-- .container_12 -->
+    <p class="footer_content_mail"><a href="mailto:contact@thibaulthuertas.com" title"">contact@thibaulthuertas.com</a></p>
+    <p class="footer_content_phone">+ 33.6.10.68.41.33</p>
+    <ul class="footer_icon">
+      <li> <a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/linkedin.png') }}" alt="Linkedin" /></a></li>
+      <li> <a href="http://www.flickr.com/photos/14850436@N05/" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="Flickr" /></a></li>
+      <li> <a href="http://www.behance.net/thibaulthuertas" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/behance.png') }}" alt="Behance" /></a></li>
+    </ul>
+  </div><!-- .footer -->
+</div><!-- .footer_content -->
+</div><!-- .container_12 -->
 
 </div><!-- .container_12 -->
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -137,7 +128,7 @@
                     <!-- end scripts-->
 
                     <script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	var _gaq=[['_setAccount','UA-38493801-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
    s.parentNode.insertBefore(g,s)}(document,'script'));

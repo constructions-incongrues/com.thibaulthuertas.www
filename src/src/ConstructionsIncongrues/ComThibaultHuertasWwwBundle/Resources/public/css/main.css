@@ -4,6 +4,10 @@
  typo 
  *********************/
 
+::selection {
+	background: #bdf2F8; /* Safari */
+	}
+
  @font-face 
  {
  	font-family: 'Regular';
@@ -25,12 +29,17 @@
  	font-size:62.5%;
  }
 
- .header_content,.content1_content,.footer_content,.details_content{ 
+
+
+.header_content, .content1_content, .footer_content, .details_content { 
  	max-width:1040px;
  	min-width: 768px;
  	margin-left: auto;
  	margin-right: auto;
- } 
+ 	
+} 
+
+	
 
  .grid_12 
  {
@@ -44,17 +53,17 @@
  	background-repeat: repeat;
  	background-image: url(../img/pattern/pattern-blue.png);
  }
- 
- .about_content 
- 	{
- 		max-width:850px;
- 		min-width: 768px;
- 		margin-left: auto;
- 		margin-right: auto;
 
- 		background-repeat: repeat;
- 		background-image: url(../img/pattern/pattern-blue.png);
- 	}
+.about_content 
+{
+	max-width:850px;
+	min-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-repeat: repeat;
+	background-image: url(../img/pattern/pattern-blue.png);
+ }
  	.header,.footer
  	{
  		background-repeat: repeat;
@@ -66,7 +75,28 @@
 /********************
  header 
  *********************/
+.header.fixed 
+{
+	height:64px;
+/*	position:fixed; top:0px; margin:auto; z-index:100000; width:100%;
+*/
+}
 
+
+ .header 
+ {
+}
+
+.caillou img 
+{
+ position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 639px;
+   height: 356px;
+   margin-top: -229px; /* Half the height */
+   margin-left: -319.5px; /* Half the width */
+}
  .logo 
  {
  	margin-top: 16px;
@@ -78,10 +108,9 @@
  {
  	text-align: right;
  	min-height: 70px;
- 	margin-top: 24px;
+ 	margin-top: 22px;
  	margin-right: -123px;
  	width:35.4%!important;
-
  }
 
 
@@ -97,29 +126,25 @@
  }
 
  .navbar a 
- 
  {
- 	color:#191919;
+ 	color:#7f7f7f;
  	font-family: 'Regular', sans-serif;
  	font-size: 12px;
  	font-size:1.2rem;
  	text-transform: uppercase;
  	text-decoration: none;
  	border-color:red;
+ 	opacity: 0.5;
  }
 
  .navbar a:hover 
  { 
-
   -webkit-transition: all .4s;
- border-bottom-width:1px; 
- 	border-bottom: 1px solid #000;
  }
 
-.navbar_active 
+.navbar_active a, .navbar a:hover
 {
-	 	border-bottom: 1px solid #000;
-
+	opacity: 1;
 }
 /********************
  home
@@ -163,6 +188,7 @@
  {
  	margin-left:-31px;
  	margin-right: 31px;
+
  }
 
  .about_content .column1 
@@ -182,6 +208,7 @@
  	{
  		max-width:372px;
  	}
+
 
  	.column2_contact
  	{
@@ -233,14 +260,17 @@
  .details_content hr 
  {
  	margin-left: auto;
- 	margin-right: auto;	} 
+ 	margin-right: auto;
+ } 
 
- 	.about_content a, .about_content li a, .about_content li, .details_content a 
+ 	.about_content a, .about_content li a, .details_content a 
  	{
  		color:#191919;
  		text-decoration: none;
  	}
 
+
+.details_content {color:#656565;}
  	.about_content a:hover, .details_content a:hover
  	{
  		border-bottom: 1px solid #191919;
@@ -252,7 +282,6 @@
 
  	}
 
-
  	.about_content_contactinfo
  	{
  		margin-bottom: 30px;
@@ -261,10 +290,10 @@
  	.about_form_name,
  	.about_form_entreprise,
  	.about_form_email,
- 	.about_form_phone
+ 	.about_form_phone,
+ 	.about_form_message
  	{
  		width:372px;
-
  		border-radius: 4px;
  		border-top:1px solid #A7A7A7;
  		border-bottom: 0px;
@@ -277,42 +306,49 @@
  		padding-left:14px; 
  	}
 
+ 	.about_form_message {
+ 		height:100px;
+ 		padding-top:10px;
+ 	}
+
  	.about_form_name:focus,
  	.about_form_entreprise:focus,
  	.about_form_email:focus,
- 	.about_form_phone:focus
+ 	.about_form_phone:focus,
+ 	.about_form_message:focus
  	{
  		background-color: #ECFCFE;
- 		border: none;
+ 		font-family: 'Regularit', sans-serif;
  	}
 
 
 input:focus 
-{outline-width: 0;
-	;} 
+{
+	outline-width: 0;
+font-style:normal;} 
 
 
- .about_form_submit
- 	{
- 		background-color: #4C4C4C;
+.about_form_submit
+{
+	background-color: #4C4C4C;
 
- 		border-radius: 4px;
- 		width:157px;
- 		height: 35px;
- 		color:#000;
- 		border:0px;
- 		font-family: 'Regular', sans-serif;
- 		color:#FFF;
- 		font-size: 12px;
- 		font-size: 1.2rem;
- 		margin-bottom:60px;
- 	}
+	border-radius: 4px;
+	width:75px;
+	height: 35px;
+	color:#000;
+	border:0px;
+	font-family: 'Regular', sans-serif;
+	color:#FFF;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom:60px;
+ }
 
- 	.about_form_submit:hover
- 	{
- 		background-color: #000;
- 		cursor: pointer;
- 	}	
+.about_form_submit:hover
+{
+	background-color: #000;
+	cursor: pointer;
+}	
 
 /********************
  detail content 
@@ -323,15 +359,17 @@ input:focus
 
  	text-align: center;
  	padding-top: 70px;
- 	padding-bottom: 70px;
-
+ 	padding-bottom: 40px;
  }
 
 .details_content img
 {
-	margin-bottom:70px;
 }
 
+img.details_content_img_border_flyer
+{
+		margin-bottom:0px;
+}
  .details_content h1 
  {
  	font-size: 32px;
@@ -340,6 +378,22 @@ input:focus
  	margin-top:-25px;
  }
 
+.details_content_nav
+{
+	margin-top:30px;
+}
+
+.details_content_nav img 
+{
+		margin-bottom:50px;
+}
+
+
+.details_content_nav.bottom
+{
+	margin-top:70px;
+	margin-bottom:0px;
+}
 .details_content_nav a:hover
 {
 border:0px}
@@ -390,10 +444,9 @@ border:0px}
  	.details_content_img_border
  	{
  		padding:20px;
- 		background-color: #FFF;
  	}
 
-hr.details_content_padding_first_pics
+	hr.details_content_padding_first_pics
  	{
  		margin-bottom: 80px;
  	}
@@ -408,6 +461,7 @@ hr.details_content_padding_first_pics
  	text-align: center;
  	height:112px;
  	padding-top: 28px;
+	font-family: 'Regular', sans-serif; 	
 	}
 
  	.footer_content ul, .footer_content li 
@@ -420,7 +474,7 @@ hr.details_content_padding_first_pics
  	{
  		font-size: 12px;
  		font-size: 1.2rem;
- 		color: #000;
+ 		color: #7F7F7F;
  		 		border-bottom: 1px solid transparent;
  		text-decoration: none;
 
@@ -433,11 +487,12 @@ hr.details_content_padding_first_pics
 
  	.footer_content_mail a:hover 
  	{
- 		border-bottom: 1px solid #000;
+ 		color:#000;
+ 		text-decoration: none;
  	}
  	.footer_content p a
  	{
- 		color:#191919;
+ 		color:#7F7F7F;
  		border-bottom: 1px solid transparent;
  		text-decoration: none;
 
@@ -447,24 +502,20 @@ hr.details_content_padding_first_pics
  		margin-bottom: 12px;
  	}
 
-
-/* 	.footer_icon li
- 	{
- 		border-bottom:2px solid transparent;
- 		margin-left: -20px;
- 		margin-top: -10px;
- 		margin-bottom: 1000px;
- 	}*/
- 	
- 	.footer_icon li:hover
- 	{
- 		border-bottom:1px solid #323232;
- 
- 	}
-
  	.footer_icon
  	{
  		margin-left: -23px;
+
+ 	}
+
+ 	.footer_icon img
+ 	{
+ 		opacity: 0.5;
+ 	}
+
+ 	.footer_icon img:hover
+ 	{
+ 		opacity: 1;
  	}
 
  	.footer_content_mail_error

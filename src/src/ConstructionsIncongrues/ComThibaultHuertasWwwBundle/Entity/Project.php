@@ -203,7 +203,7 @@ class Project
         $finder = new Finder();
         $images = $finder
             ->files()
-            ->notName('*_home.jpg')
+            ->notName('*_home.png')
             ->sortByName()
             ->in(__DIR__.'/../Resources/public/assets/projects/'.$this->getSlug());
 

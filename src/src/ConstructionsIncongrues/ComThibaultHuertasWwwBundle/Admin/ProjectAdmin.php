@@ -13,13 +13,12 @@ class ProjectAdmin extends Admin
     {
         $formMapper
             ->add('title', null, array('required' => true))
+            ->add('slug', null, array('required' => true))
             ->add('description', null, array('required' => true))
-            ->add(
-            	'images', 
-            	'sonata_type_collection', 
-            	array('required' => false), 
-            	array('edit' => 'inline', 'inline' => 'table', 'targetEntity'=>'ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\Image')
-            )
+            ->add('credits', null, array('required' => false))
+            ->add('hover', null, array('required' => true))
+            ->add('date_released', null, array('required' => true))
+            ->add('is_enabled', null, array('required' => false))
         ;
     }
 
@@ -27,7 +26,7 @@ class ProjectAdmin extends Admin
     {
         $datagridMapper
             ->add('title')
-            ->add('description')
+            ->add('is_enabled')
         ;
     }
 
@@ -35,7 +34,8 @@ class ProjectAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('description')
+            ->add('is_enabled')
+            ->add('date_released')
         ;
     }
 }

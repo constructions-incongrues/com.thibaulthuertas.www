@@ -3,8 +3,11 @@
 namespace ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+use ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\ContactMessage;
 
 class DefaultController extends Controller
 {
@@ -51,4 +54,52 @@ class DefaultController extends Controller
             'projectNext' => $projectNext
         );
     }
+
+    /**
+     * Displays contact page.
+     * 
+     * @Route("/contact", name="contact")
+     * @Template("ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:contact.html.twig")
+     */
+    public function contactAction(Request $request)
+    {
+        $message = new ContactMessage();
+        $form = $this->createFormBuilder($message)
+            ->add('name', 'text')
+            ->add('company', 'text')
+            ->add('email', 'email')
+            ->add('phone', 'text')
+            ->add('message', 'text')
+            ->getForm();
+        
+        if ($request->getMethod() == 'POST') {
+            $form->bindRequest($request);
+            
+            // Validate form
+            if ($form->isValid()) {
+                // Send email
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('[thibaulthuertas.com] Nouveau message de ' . $form->get('name')->getData())
+                    ->setFrom('contact@thibaulthuertas.com')
+                    ->setTo('tristan@rivoallan.net')
+                    ->setBody(
+                        $this->renderView(
+                            'ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:email.txt.twig',
+                            array(
+                                'name'    => $form->get('name')->getData(),
+                                'company' => $form->get('company')->getData(),
+                                'email'   => $form->get('email')->getData(),
+                                'phone'   => $form->get('phone')->getData(),
+                                'message' => $form->get('message')->getData(),
+                            )
+                        )
+                    )
+                ;
+                $this->get('mailer')->send($message);
+            }
+        }
+
+        return array('form' => $form->createView());
+    }
+
 }

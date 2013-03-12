@@ -22,6 +22,7 @@ class LoadUserData implements FixtureInterface
                 $isHeader = false;
                 continue;
             }
+
             // Create project from csv data
             $project = new Project();
             $project->setTitle($data[0]);

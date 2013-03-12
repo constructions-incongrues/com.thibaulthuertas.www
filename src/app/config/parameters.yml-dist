@@ -5,10 +5,11 @@ parameters:
     database_name: @database.main.name@
     database_user: @database.main.username@
     database_password: @database.main.password@
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_transport: sendmail
+    mailer_host: null
     mailer_user: null
     mailer_password: null
-    locale: en
+    locale: fr
     secret: b00abcf0414f244f205e6210218d9c31cd4265a8
     database_path: null
+    assets_base_url: "@symfony2.assets_base_url@"
