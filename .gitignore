@@ -3,6 +3,7 @@
 
 # dist files
 /src/app/config/parameters.yml
+/src/app/config/security.yml
 
 # composer
 /vendor/*
