@@ -76,31 +76,35 @@
     </script>
 </head>
 <body>
-<div id="wrapper">
-<div class="container_12" id="content">
-    <div class="grid_12 header {% block header_class %}{% endblock %}">
-      <div class="header_content">
-        <div class="grid_8 logo">
-      <p>
-        <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
-          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" />
-        </a>
+
+<div id="wrapper" class="container_12">
+
+<header role="banner">
+  <div class="header grid_12 {% block header_class %}{% endblock %}">
+    <div class="header_content">
+      <div class="logo grid_8 ">
+        <p>
+           <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
+           <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" alt="Logo"/>
+          </a>
+         </p>
       </div>  <!-- .logo -->
 
-      <div class="grid_4 navbar">
+      <div class="navbar grid_4 ">
         <ul>
           <li class="{% block navbar_class_homepage %}{% endblock %}"><a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
           <li class="{% block navbar_class_projects %}{% endblock %}"><a href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
           <li class="{% block navbar_class_contact %}{% endblock %}"><a href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
         </ul> 
       </div><!-- .navbar -->
+
       <div class="clear"> </div>
       {% block caillou %}
       {% endblock %}
+  </div><!-- .header -->
+    </div> <!-- .header_content -->
+  </header>
 
-</div> <!-- .header_content -->
-</div><!-- .header -->
-  
 <div class="grid_12 content1">
   {% block content %}
   <!-- block content --> 
@@ -110,20 +114,22 @@
 </div><!-- ??? -->
 </div><!-- ??? -->
 
-<div id="footer">
+<footer role="contentinfo">
 
   <div class="footer_content">
-    <p class="footer_content_mail"><a href="mailto:contact@thibaulthuertas.com" title"">contact@thibaulthuertas.com</a></p>
-    <p class="footer_content_phone">+ 33.6.10.68.41.33</p>
+    <p class="footer_content_mail">
+      <a href="mailto:contact@thibaulthuertas.com" title"">contact@thibaulthuertas.com</a>
+    </p>
+    <p class="footer_content_phone">
+      + 33.6.10.68.41.33
+    </p>
     <ul class="footer_icon">
       <li> <a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/linkedin.png') }}" alt="Linkedin" /></a></li>
       <li> <a href="http://www.flickr.com/photos/14850436@N05/" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="Flickr" /></a></li>
       <li> <a href="http://www.behance.net/thibaulthuertas" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/behance.png') }}" alt="Behance" /></a></li>
     </ul>
-  </div><!-- .footer -->
 </div><!-- .footer_content -->
-</div><!-- .container_12 -->
-
+</footer>
 </div><!-- .container_12 -->
 
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

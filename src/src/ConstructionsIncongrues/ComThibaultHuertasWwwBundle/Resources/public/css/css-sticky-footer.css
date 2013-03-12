@@ -12,12 +12,14 @@ body > #wrapper { height: auto; min-height: 100%; }
 /* must be same height as the footer */
 #content { overflow: auto; padding-bottom: 140px; } 
 
-#footer {
+footer {
     position: relative;
     margin-top: -140px; /* negative value of footer height */
     height: 140px;
     clear: both;
-
+background-repeat: repeat;
+        background-image: url(../img/pattern/pattern-blue.png);
+        width: 100%;
  		
  		}
 
@@ -28,10 +30,4 @@ body:before { /* thanks to Maleika (Kohoutec)*/
     float: left;
     width: 0;
     margin-top: -32767px; /* thank you Erik J */
-}
-#footer 
-{
-		background-repeat: repeat;
- 		background-image: url(../img/pattern/pattern-blue.png);
- 		width: 100%;
 }
