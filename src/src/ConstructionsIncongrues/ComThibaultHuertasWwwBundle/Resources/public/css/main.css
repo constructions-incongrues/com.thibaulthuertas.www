@@ -64,12 +64,13 @@
 	background-repeat: repeat;
 	background-image: url(../img/pattern/pattern-blue.png);
  }
- 	.header,.footer
+ 	.header
  	{
  		background-repeat: repeat;
  		background-image: url(../img/pattern/pattern-blue.png);
  		width: 100%;
  	}
+
 
 
 /********************
