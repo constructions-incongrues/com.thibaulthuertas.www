@@ -46,9 +46,9 @@
 
       <div class="navbar grid_4 ">
         <ul>
-          <li class="{% block navbar_class_homepage %}{% endblock %}"><a class="smooth" href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
-          <li class="{% block navbar_class_projects %}{% endblock %}"><a class="smooth" href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
-          <li class="{% block navbar_class_contact %}{% endblock %}"><a class="smooth" href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
+          <li class="{% block navbar_class_homepage %}{% endblock %}"><a class="" href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
+          <li class="{% block navbar_class_projects %}{% endblock %}"><a class="{% block navbar_class_smooth %}smooth{% endblock %}" href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
+          <li class="{% block navbar_class_contact %}{% endblock %}"><a class="" href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
         </ul> 
       </div><!-- .navbar -->
 

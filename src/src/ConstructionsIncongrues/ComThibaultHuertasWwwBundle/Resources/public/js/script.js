@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Smooth scrolling for same page links
-	$('div.navbar a').smoothScroll();
+	$('div.navbar a.smooth').smoothScroll();
 
 	// Projects covers
 	$('.fade').mosaic();
