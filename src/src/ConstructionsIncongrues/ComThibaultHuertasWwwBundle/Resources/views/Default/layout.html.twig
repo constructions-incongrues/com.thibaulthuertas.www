@@ -22,58 +22,12 @@
   <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/fluid_grid.css') }}"/>
   <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/mosaic.css') }}" type="text/css" media="screen" />
 
-
-    <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/css-sticky-footer.css') }}">
+  <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/css-sticky-footer.css') }}">
 
   <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/main.css') }}">
   
 	<script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/modernizr-2.0.6.min.js') }}"></script>
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/mosaic.1.0.1.js') }}"></script>
     
-  <script type="text/javascript">
-      
-      jQuery(function($){
-        
-        $('.circle').mosaic({
-          opacity   : 0.8     //Opacity for overlay (0-1)
-        });
-        
-        $('.fade').mosaic();
-        
-        $('.bar').mosaic({
-          animation : 'slide'   //fade or slide
-        });
-        
-        $('.bar2').mosaic({
-          animation : 'slide'   //fade or slide
-        });
-        
-        $('.bar3').mosaic({
-          animation : 'slide',  //fade or slide
-          anchor_y  : 'top'   //Vertical anchor position
-        });
-        
-        $('.cover').mosaic({
-          animation : 'slide',  //fade or slide
-          hover_x   : '400px'   //Horizontal position on hover
-        });
-        
-        $('.cover2').mosaic({
-          animation : 'slide',  //fade or slide
-          anchor_y  : 'top',    //Vertical anchor position
-          hover_y   : '80px'    //Vertical position on hover
-        });
-        
-        $('.cover3').mosaic({
-          animation : 'slide',  //fade or slide
-          hover_x   : '400px',  //Horizontal position on hover
-          hover_y   : '300px'   //Vertical position on hover
-        });
-        
-        });
-    </script>
 </head>
 <body>
 
@@ -92,9 +46,9 @@
 
       <div class="navbar grid_4 ">
         <ul>
-          <li class="{% block navbar_class_homepage %}{% endblock %}"><a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
-          <li class="{% block navbar_class_projects %}{% endblock %}"><a href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
-          <li class="{% block navbar_class_contact %}{% endblock %}"><a href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
+          <li class="{% block navbar_class_homepage %}{% endblock %}"><a class="smooth" href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
+          <li class="{% block navbar_class_projects %}{% endblock %}"><a class="smooth" href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
+          <li class="{% block navbar_class_contact %}{% endblock %}"><a class="smooth" href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
         </ul> 
       </div><!-- .navbar -->
 
@@ -134,7 +88,9 @@
 
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                     <script>window.jQuery || document.write('<script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/jquery') }}-1.7.1.min.js"><\/script>')</script>
-
+                    <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/mosaic.1.0.1.js') }}"></script>
+                    <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/jquery-smooth-scroll/jquery.smooth-scroll.min.js') }}"></script>
+                    
                     <!-- scripts concatenated and minified via ant build script-->
                     <script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/plugins.js') }}"></script>
                     <script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/script.js') }}"></script>
