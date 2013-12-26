@@ -1,7 +1,7 @@
 {% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::Default/layout.html.twig' %}
 
 {% block title %}
-{{ project.title }} | 
+{{ project.title }} |
 {% endblock %}
 
 {% block navbar_class_projects %}navbar_active{% endblock %}
@@ -11,89 +11,73 @@
 {% block caillou %}{% endblock %}
 
 {% block content %}
-<div class="details_content" id="project">
 
-  <ul class="details_content_nav">
-    {% if projectPrevious %}
-    <li>
-      <a href="{{ path('project_show', {slug: projectPrevious.slug}) }}" title="Voir le projet {{ projectPrevious.title }}">
 
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" />
-
-      </a>
-    </li>  
-    {% else %}
-    <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" style="opacity:0;" />
-    </li>
-    {% endif %}
-    <li>
-      <a href="{{ path('homepage') }}#projects" title="Retourner à la liste des projets">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/retour-mosaique.png') }}" />
-      </a>
-    </li>
-    {% if projectNext %}
-    <li>
-      <a href="{{ path('project_show', {slug: projectNext.slug}) }}" title="Voir le projet {{ projectNext.title }}">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
-      </a>
-    </li>
-    {% else %}
-    <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" style="opacity:0;" />
-    </li>
-    {% endif %}
-  </ul>
-
-  <h1>{{ project.title }}</h1>
-  <p class="details_content_p_big">
-    {{ project.description|raw|nl2br }} 
-  </p>
-
-  {% if project.credits %}
-  <hr />
-  <p class="details_content_p_slim">
-    {{ project.credits|raw|nl2br }}
-  </p>
+<section class="projet">
+  <nav>
+  <ul>
+   {% if projectPrevious %}
+   <li><a href="{{ path('project_show', {slug: projectPrevious.slug}) }}" title="Voir le projet {{ projectPrevious.title }}"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" /></li>
+  {% else %}
+  <li><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" />
   {% endif %}
 
-  <hr class="details_content_padding_first_pics" /> 
-
-  {% for image in project.getImages() %}
-  <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ image.getFilename()) }}" class="details_content_img_border details_content_img_border_flyer" />
-  <br />  
-  {% endfor %}
-
-  <ul class="details_content_nav bottom">
-    {% if projectPrevious %}
-    <li>
-      <a href="{{ path('project_show', {slug: projectPrevious.slug}) }}" title="Voir le projet {{ projectPrevious.title }}">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" />
-      </a>
-    </li>  
-    {% else %}
-    <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" style="opacity:0;" />
-    </li>
-    {% endif %}
-    <li>
-      <a href="{{ path('homepage') }}#projects" title="Retourner à la liste des projets">
+  <li><a href="{{ path('homepage') }}#projects" title="Retourner à la liste des projets">
         <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/retour-mosaique.png') }}" />
       </a>
-    </li>
-    {% if projectNext %}
+  </li>
+ {% if projectNext %}
+  <li>
+    <a href="{{ path('project_show', {slug: projectNext.slug}) }}" title="Voir le projet {{ projectNext.title }}">
+      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
+    </a>
+  </li>
+  {% else %}
     <li>
-      <a href="{{ path('project_show', {slug: projectNext.slug}) }}" title="Voir le projet {{ projectNext.title }}">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
+      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
+  </li>
+  {% endif %}
+ </ul>
+  </nav>
+
+  <h1>{{ project.title }}</h1>
+  <p>{{ project.description|raw|nl2br }}</p>
+  <hr />
+  <p>{{ project.credits|raw|nl2br }}</p>
+
+  <hr />
+  <section class="capture">
+  {% for image in project.getImages() %}
+
+ <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ image.getFilename()) }}" alt="" />
+ {% endfor %}
+
+  </section>
+ <nav>
+  <ul>
+   {% if projectPrevious %}
+   <li><a href="{{ path('project_show', {slug: projectPrevious.slug}) }}" title="Voir le projet {{ projectPrevious.title }}"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" /></li>
+  {% else %}
+  <li><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-left.png') }}" />
+  {% endif %}
+
+  <li><a href="{{ path('homepage') }}#projects" title="Retourner à la liste des projets">
+        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/retour-mosaique.png') }}" />
       </a>
-    </li>
-    {% else %}
+  </li>
+ {% if projectNext %}
+  <li>
+    <a href="{{ path('project_show', {slug: projectNext.slug}) }}" title="Voir le projet {{ projectNext.title }}">
+      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
+    </a>
+  </li>
+  {% else %}
     <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" style="opacity:0;" />
-    </li>
-    {% endif %}
-  </ul>
+      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/arrow-right.png') }}" />
+  </li>
+  {% endif %}
+ </ul>
+  </nav>
 
-</div><!-- /.details_content -->
-
+</section>
 {% endblock %}

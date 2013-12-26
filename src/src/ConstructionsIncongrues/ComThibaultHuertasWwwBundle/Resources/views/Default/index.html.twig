@@ -1,50 +1,38 @@
 {% extends 'ConstructionsIncongruesComThibaultHuertasWwwBundle::Default/layout.html.twig' %}
 
 {% block navbar_class_homepage %}navbar_active{% endblock %}
-
 {% block caillou %}
-      <div class="grid_12 home caillou">
-        <a class="smooth" href="#projects" title="Consulter la liste des projets">
-          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/home/1.png') }}" />
-        </a>
-      </div>
+ <section class="intro">
+  <aside role="complementary">
+    <a class="smooth" href="#projects" title="Consulter la liste des projets">
+     <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/home/1.png') }}" />
+    </a>
+   </aside>
+</section>
 {% endblock %}
 
 {% block content %}
-<div class="content1_content" id="projects">
+<section  role="main" class="mosaic">
+   {% for project in projects %}
 
-  {% for project in projects %}
 
-    {% if loop.index0 == 0 %}
-  <div class="grid_6 column1">
-    <ul >
-    {% elseif loop.index0 == (loop.length // 2) %}
-    </ul>
-  </div>
-  <div class="grid_6 column2">
-    <ul >
-    {% endif %}
 
-      <li class="mosaic-block fade">
-        <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
-          <span class="mosaic-overlay"> 
-            <span class="details">    
-              <h1>{{ project.title }}</h1>
-              <hr />
-              <h2>{{ project.hover }}</h2>
-            </span>
-          </span>
-        </a>
-        <span class="mosaic-backdrop">
-          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
-        </span>
-      </li>
-    {% if loop.index == loop.length + 2 %}
-    </ul>
-  </div>
-    {% endif %}
-  {% endfor %}
-</div><!-- .content1_content -->
-</div>
+  <article class="mosaic-block fade">
+    <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
+    <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" alt="">
+    </a>
+  <span class="mosaic-overlay">
+    <span class="details">
+      <h1>{{ project.title }}</h1>
+        <hr />
+      <h2>{{ project.hover }}</h2>
+      </span>
+  </span>
+  </article>
+    <hr />
+
+    {% endfor %}
+</section>
+
 
 {% endblock %}
