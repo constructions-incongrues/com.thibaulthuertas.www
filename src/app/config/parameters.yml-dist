@@ -12,4 +12,3 @@ parameters:
     locale: fr
     secret: b00abcf0414f244f205e6210218d9c31cd4265a8
     database_path: null
-    assets_base_url: "@symfony2.assets_base_url@"
