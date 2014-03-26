@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+/* line 5, ../sass/contact.scss */
+#contact {
+  background-image: url(../img/pattern-black.png);
+  background-repeat: repeat;
+  color: #e5e5e5;
+  font-family: "Regular", sans-serif;
+  padding: 0 10px;
+}
+
+/* line 12, ../sass/contact.scss */
+#contact span {
+  display: block;
+  height: 80px;
+  text-align: right;
+}
+/* line 16, ../sass/contact.scss */
+#contact span img {
+  height: 22px;
+  position: relative;
+  top: 50%;
+  width: 22px;
+}
+/* line 22, ../sass/contact.scss */
+#contact span a {
+  opacity: .4;
+}
+/* line 23, ../sass/contact.scss */
+#contact span a:hover {
+  opacity: 1;
+}
+
+/* line 29, ../sass/contact.scss */
+#contact h1,
+#contact h2 {
+  color: white;
+  font-size: 1.4375em;
+  padding: 20px 0 0;
+  text-transform: capitalize;
+}
+/* line 35, ../sass/contact.scss */
+#contact hr {
+  border: 0 0 2px 0;
+  border-color: #e5e5e5;
+  border-style: solid;
+  line-height: 2px;
+  margin: 20px 0;
+  width: 18px;
+}
+/* line 43, ../sass/contact.scss */
+#contact p {
+  font-size: 0.75em;
+  line-height: 16px;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+/* line 49, ../sass/contact.scss */
+#contact li {
+  font-size: 0.75em;
+  line-height: 16px;
+}
+
+/* line 55, ../sass/contact.scss */
+#contact a {
+  color: #c0f5fb;
+}
+/* line 57, ../sass/contact.scss */
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* line 60, ../sass/contact.scss */
+.equal {
+  display: table;
+}
+
+/* line 61, ../sass/contact.scss */
+.row {
+  display: table-row;
+}
+
+/* line 62, ../sass/contact.scss */
+.row article {
+  display: table-cell;
+  padding: 0 0 80px;
+}

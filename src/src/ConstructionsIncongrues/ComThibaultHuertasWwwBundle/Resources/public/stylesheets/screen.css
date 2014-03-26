@@ -1,0 +1,556 @@
+/* line 17, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+/* line 5, ../sass/header.scss */
+header {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  color: #b2b2b2;
+  font-family: "Regular", sans-serif;
+  font-size: 0.75em;
+  height: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+/* line 15, ../sass/header.scss */
+header img,
+header ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 20, ../sass/header.scss */
+header aside {
+  float: left;
+  margin-left: 10px;
+  min-width: 10%;
+}
+
+/* line 27, ../sass/header.scss */
+header nav {
+  float: right;
+  margin-right: 10px;
+  max-width: 90%;
+}
+/* line 31, ../sass/header.scss */
+header nav li {
+  display: inline;
+  margin: 0 5px;
+}
+/* line 34, ../sass/header.scss */
+header nav li.selected a {
+  color: #323232;
+}
+/* line 35, ../sass/header.scss */
+header nav li a {
+  color: #7f7f7f;
+}
+/* line 36, ../sass/header.scss */
+header nav li a:hover {
+  color: #323232;
+}
+
+/* line 40, ../sass/header.scss */
+.intro {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  padding: 0 10px;
+}
+/* line 43, ../sass/header.scss */
+.intro img {
+  height: auto;
+  max-width: 100%;
+}
+/* line 47, ../sass/header.scss */
+.intro aside {
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+/* line 5, ../sass/contact.scss */
+#contact {
+  background-image: url(../img/pattern-black.png);
+  background-repeat: repeat;
+  color: #e5e5e5;
+  font-family: "Regular", sans-serif;
+  padding: 0 10px;
+}
+
+/* line 12, ../sass/contact.scss */
+#contact span {
+  display: block;
+  height: 80px;
+  text-align: right;
+}
+/* line 16, ../sass/contact.scss */
+#contact span img {
+  height: 22px;
+  position: relative;
+  top: 50%;
+  width: 22px;
+}
+/* line 22, ../sass/contact.scss */
+#contact span a {
+  opacity: .4;
+}
+/* line 23, ../sass/contact.scss */
+#contact span a:hover {
+  opacity: 1;
+}
+
+/* line 29, ../sass/contact.scss */
+#contact h1,
+#contact h2 {
+  color: white;
+  font-size: 1.4375em;
+  padding: 20px 0 0;
+  text-transform: capitalize;
+}
+/* line 35, ../sass/contact.scss */
+#contact hr {
+  border: 0 0 2px 0;
+  border-color: #e5e5e5;
+  border-style: solid;
+  line-height: 2px;
+  margin: 20px 0;
+  width: 18px;
+}
+/* line 43, ../sass/contact.scss */
+#contact p {
+  font-size: 0.75em;
+  line-height: 16px;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+/* line 49, ../sass/contact.scss */
+#contact li {
+  font-size: 0.75em;
+  line-height: 16px;
+}
+
+/* line 55, ../sass/contact.scss */
+#contact a {
+  color: #c0f5fb;
+}
+/* line 57, ../sass/contact.scss */
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* line 60, ../sass/contact.scss */
+.equal {
+  display: table;
+}
+
+/* line 61, ../sass/contact.scss */
+.row {
+  display: table-row;
+}
+
+/* line 62, ../sass/contact.scss */
+.row article {
+  display: table-cell;
+  padding: 0 0 80px;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+/* line 6, ../sass/portfolio.scss */
+.mosaic,
+.projet {
+  margin: 0 auto;
+  padding: 70px 0 53px;
+}
+
+/* line 12, ../sass/portfolio.scss */
+.mosaic hr {
+  clear: both;
+  visibility: hidden;
+}
+/* line 16, ../sass/portfolio.scss */
+.mosaic article {
+  margin-bottom: 17px;
+}
+
+/* line 19, ../sass/portfolio.scss */
+.projet hr {
+  border: 0 0 2px 0;
+  border-color: #191919;
+  border-style: solid;
+  line-height: 1px;
+  width: 18px;
+}
+
+/* line 28, ../sass/portfolio.scss */
+.projet {
+  font-family: "Regular", sans-serif;
+  text-align: center;
+}
+/* line 31, ../sass/portfolio.scss */
+.projet h1 {
+  color: #191919;
+  font-size: 2em;
+  margin: 70px 0 25px;
+  text-transform: capitalize;
+}
+/* line 36, ../sass/portfolio.scss */
+.projet h1 + p {
+  color: #656565;
+  font-size: 1em;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 940px;
+}
+
+/* line 47, ../sass/portfolio.scss */
+.projet nav li {
+  display: inline;
+  opacity: .6;
+  padding: 0 10px;
+}
+/* line 51, ../sass/portfolio.scss */
+.projet nav li:hover {
+  opacity: 1;
+}
+
+/* line 56, ../sass/portfolio.scss */
+.projet ul {
+  margin: 20px;
+}
+/* line 58, ../sass/portfolio.scss */
+.projet ul li {
+  color: #656565;
+  font-size: 0.75em;
+}
+/* line 61, ../sass/portfolio.scss */
+.projet ul li a {
+  color: #191919;
+  text-decoration: none;
+}
+/* line 64, ../sass/portfolio.scss */
+.projet ul li a:hover {
+  text-decoration: underline;
+}
+
+/* line 70, ../sass/portfolio.scss */
+.capture img {
+  height: auto;
+  max-width: 100%;
+  padding: 20px 0;
+}
+/* line 74, ../sass/portfolio.scss */
+.capture img:first-child {
+  margin-top: 80px;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf");
+}
+
+/* line 5, ../sass/footer.scss */
+footer {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  bottom: 0;
+  color: #7f7f7f;
+  font-family: "Regular", sans-serif;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  width: 100%;
+}
+/* line 14, ../sass/footer.scss */
+footer section {
+  display: inline-block;
+  line-height: 1.1;
+  vertical-align: middle;
+}
+
+/* line 21, ../sass/footer.scss */
+footer ul {
+  display: inline;
+  vertical-align: middle;
+}
+/* line 24, ../sass/footer.scss */
+footer ul li {
+  font-size: 0.75em;
+  list-style: none;
+  padding: 6px;
+}
+/* line 29, ../sass/footer.scss */
+footer ul a {
+  color: #7f7f7f;
+}
+/* line 30, ../sass/footer.scss */
+footer ul a:hover {
+  color: #323232;
+}
+
+/* line 34, ../sass/footer.scss */
+footer ul:nth-child(2) li {
+  display: inline;
+  margin: 10px 0;
+  opacity: .6;
+  padding: 15px;
+}
+/* line 39, ../sass/footer.scss */
+footer ul:nth-child(2) li:hover {
+  opacity: 1;
+}
+
+/* line 43, ../sass/footer.scss */
+address {
+  margin-bottom: 20px;
+}
+
+/* line 9, ../sass/screen.scss */
+body {
+  background-image: url(../img/pattern-grey.png);
+  background-repeat: repeat;
+}
+
+/* line 11, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+@media all and (min-width: 1060px) {
+  /* line 14, ../sass/screen.scss */
+  header section, .mosaic, #projets, footer section, .intro + aside {
+    margin: auto;
+    width: 1060px;
+  }
+
+  /* line 15, ../sass/screen.scss */
+  .equal, #contact span {
+    margin: auto;
+    width: 940px;
+  }
+
+  /* line 16, ../sass/screen.scss */
+  #contact address {
+    display: none;
+  }
+
+  /* line 17, ../sass/screen.scss */
+  .intro img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  .mosaic img {
+    height: 338px;
+    width: 510px;
+  }
+
+  /* line 19, ../sass/screen.scss */
+  .mosaic article:nth-child(odd) {
+    margin-right: 20px;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  /* line 20, ../sass/screen.scss */
+  .mosaic article:nth-child(even) {
+    padding-right: 10px;
+    text-align: right;
+  }
+
+  /* line 21, ../sass/screen.scss */
+  .mosaic article {
+    display: block;
+    float: left;
+  }
+}
+@media all and (max-width: 1060px) {
+  /* line 25, ../sass/screen.scss */
+  header section, .mosaic, #projets, footer section {
+    margin: auto;
+    max-width: 1060px;
+  }
+
+  /* line 26, ../sass/screen.scss */
+  .mosaic article {
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 27, ../sass/screen.scss */
+  #contact address {
+    display: none;
+  }
+
+  /* line 28, ../sass/screen.scss */
+  .intro img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* line 29, ../sass/screen.scss */
+  .mosaic img {
+    height: 338px;
+    max-width: 510px;
+  }
+}
+@media all and (max-width: 510px) {
+  /* line 33, ../sass/screen.scss */
+  header section, .mosaic, #projets, footer section {
+    margin: auto;
+    max-width: 510px;
+  }
+
+  /* line 34, ../sass/screen.scss */
+  .intro {
+    display: none;
+  }
+
+  /* line 35, ../sass/screen.scss */
+  #contact div {
+    display: none;
+  }
+
+  /* line 36, ../sass/screen.scss */
+  #contact address {
+    display: inline;
+    position: relative;
+    top: -24px;
+  }
+
+  /* line 37, ../sass/screen.scss */
+  #contact {
+    height: 60px;
+    padding: 10px;
+  }
+
+  /* line 38, ../sass/screen.scss */
+  #contact span {
+    height: 40px;
+  }
+
+  /* line 39, ../sass/screen.scss */
+  header ul {
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+
+  /* line 40, ../sass/screen.scss */
+  .mosaic article {
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 41, ../sass/screen.scss */
+  .mosaic img {
+    height: 198px;
+    width: 300px;
+  }
+}

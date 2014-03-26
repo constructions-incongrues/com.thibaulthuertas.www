@@ -1,0 +1,75 @@
+@import "mixin";
+@import "typography";
+@import "colors";
+
+.mosaic,
+.projet {
+  margin: 0 auto;
+  padding: 70px 0 53px;
+}
+
+.mosaic {
+  hr {
+    clear: both;
+    visibility: hidden;
+}
+  article { margin-bottom: 17px; }
+}
+
+.projet hr {
+  border: 0 0 2px 0;
+  border-color: $color-black;
+  border-style: solid;
+  line-height: 1px;
+  width: 18px;
+
+}
+
+.projet {
+  font-family: $regular;
+  text-align: center;
+  h1 {
+    color: $color-black;
+    font-size: em(32px);
+    margin: 70px 0 25px;
+    text-transform: capitalize;
+    + p {
+      color: $color-grey-2;
+      font-size: em(16px);
+      margin: 0 auto;
+      margin-bottom: 50px;
+      max-width: 940px;
+  }
+ }
+}
+
+.projet nav {
+  li {
+    display: inline;
+    opacity: .6;
+    padding: 0 10px;
+    &:hover { opacity: 1; }
+ }
+}
+
+.projet {
+  ul {
+    margin: 20px;
+    li {
+      color: $color-grey-2;
+      font-size: $font-small;
+      a {
+        color: $color-black;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+   }
+  }
+ }
+}
+
+.capture img {
+  height: auto;
+  max-width: 100%;
+  padding: 20px 0;
+  &:first-child { margin-top: 80px; }
+}

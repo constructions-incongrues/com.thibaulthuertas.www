@@ -1,0 +1,332 @@
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf"); }
+
+header {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  color: #b2b2b2;
+  font-family: "Regular", sans-serif;
+  font-size: 0.75em;
+  height: 60px;
+  line-height: 60px;
+  text-transform: uppercase; }
+  header img,
+  header ul {
+    display: inline-block;
+    vertical-align: middle; }
+  header aside {
+    float: left;
+    margin-left: 10px;
+    min-width: 10%; }
+
+header nav {
+  float: right;
+  margin-right: 10px;
+  max-width: 90%; }
+  header nav li {
+    display: inline;
+    margin: 0 5px; }
+    header nav li.selected a {
+      color: #323232; }
+    header nav li a {
+      color: #7f7f7f; }
+    header nav li a:hover {
+      color: #323232; }
+
+.intro {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  padding: 0 10px; }
+  .intro img {
+    height: auto;
+    max-width: 100%; }
+  .intro aside {
+    border: 1px solid transparent;
+    text-align: center; }
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf"); }
+
+#contact {
+  background-image: url(../img/pattern-black.png);
+  background-repeat: repeat;
+  color: #e5e5e5;
+  font-family: "Regular", sans-serif;
+  padding: 0 10px; }
+
+#contact span {
+  display: block;
+  height: 80px;
+  text-align: right; }
+  #contact span img {
+    height: 22px;
+    position: relative;
+    top: 50%;
+    width: 22px; }
+  #contact span a {
+    opacity: .4; }
+    #contact span a:hover {
+      opacity: 1; }
+
+#contact h1,
+#contact h2 {
+  color: white;
+  font-size: 1.4375em;
+  padding: 20px 0 0;
+  text-transform: capitalize; }
+#contact hr {
+  border: 0 0 2px 0;
+  border-color: #e5e5e5;
+  border-style: solid;
+  line-height: 2px;
+  margin: 20px 0;
+  width: 18px; }
+#contact p {
+  font-size: 0.75em;
+  line-height: 16px;
+  margin-bottom: 20px;
+  max-width: 90%; }
+#contact li {
+  font-size: 0.75em;
+  line-height: 16px; }
+
+#contact a {
+  color: #c0f5fb; }
+  #contact a:hover {
+    text-decoration: underline; }
+
+.equal {
+  display: table; }
+
+.row {
+  display: table-row; }
+
+.row article {
+  display: table-cell;
+  padding: 0 0 80px; }
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf"); }
+
+.mosaic,
+.projet {
+  margin: 0 auto;
+  padding: 70px 0 53px; }
+
+.mosaic hr {
+  clear: both;
+  visibility: hidden; }
+.mosaic article {
+  margin-bottom: 17px; }
+
+.projet hr {
+  border: 0 0 2px 0;
+  border-color: #191919;
+  border-style: solid;
+  line-height: 1px;
+  width: 18px; }
+
+.projet {
+  font-family: "Regular", sans-serif;
+  text-align: center; }
+  .projet h1 {
+    color: #191919;
+    font-size: 2em;
+    margin: 70px 0 25px;
+    text-transform: capitalize; }
+    .projet h1 + p {
+      color: #656565;
+      font-size: 1em;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      max-width: 940px; }
+
+.projet nav li {
+  display: inline;
+  opacity: .6;
+  padding: 0 10px; }
+  .projet nav li:hover {
+    opacity: 1; }
+
+.projet ul {
+  margin: 20px; }
+  .projet ul li {
+    color: #656565;
+    font-size: 0.75em; }
+    .projet ul li a {
+      color: #191919;
+      text-decoration: none; }
+      .projet ul li a:hover {
+        text-decoration: underline; }
+
+.capture img {
+  height: auto;
+  max-width: 100%;
+  padding: 20px 0; }
+  .capture img:first-child {
+    margin-top: 80px; }
+
+@font-face {
+  font-family: 'Regular';
+  src: url("../font/aller_lt-webfont.ttf"); }
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../font/aller_ltit-webfont.ttf"); }
+
+footer {
+  background-image: url(../img/pattern-blue.png);
+  background-repeat: repeat;
+  bottom: 0;
+  color: #7f7f7f;
+  font-family: "Regular", sans-serif;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  width: 100%; }
+  footer section {
+    display: inline-block;
+    line-height: 1.1;
+    vertical-align: middle; }
+
+footer ul {
+  display: inline;
+  vertical-align: middle; }
+  footer ul li {
+    font-size: 0.75em;
+    list-style: none;
+    padding: 6px; }
+  footer ul a {
+    color: #7f7f7f; }
+  footer ul a:hover {
+    color: #323232; }
+
+footer ul:nth-child(2) li {
+  display: inline;
+  margin: 10px 0;
+  opacity: .6;
+  padding: 15px; }
+  footer ul:nth-child(2) li:hover {
+    opacity: 1; }
+
+address {
+  margin-bottom: 20px; }
+
+body {
+  background-image: url(../img/pattern-grey.png);
+  background-repeat: repeat; }
+
+a {
+  text-decoration: none; }
+
+@media all and (min-width: 1060px) {
+  header section, .mosaic, #projets, footer section, .intro + aside {
+    margin: auto;
+    width: 1060px; }
+
+  .equal, #contact span {
+    margin: auto;
+    width: 940px; }
+
+  #contact address {
+    display: none; }
+
+  .intro img {
+    height: auto;
+    max-width: 100%; }
+
+  .mosaic img {
+    height: 338px;
+    width: 510px; }
+
+  .mosaic article:nth-child(odd) {
+    margin-right: 20px;
+    padding-left: 10px;
+    text-align: left; }
+
+  .mosaic article:nth-child(even) {
+    padding-right: 10px;
+    text-align: right; }
+
+  .mosaic article {
+    display: block;
+    float: left; } }
+@media all and (max-width: 1060px) {
+  header section, .mosaic, #projets, footer section {
+    margin: auto;
+    max-width: 1060px; }
+
+  .mosaic article {
+    padding: 0 10px;
+    text-align: center;
+    width: 100%; }
+
+  #contact address {
+    display: none; }
+
+  .intro img {
+    height: auto;
+    max-width: 100%; }
+
+  .mosaic img {
+    height: 338px;
+    width: 510px; } }
+@media all and (max-width: 510px) {
+  header section, .mosaic, #projets, footer section {
+    margin: auto;
+    max-width: 510px; }
+
+  .intro {
+    display: none; }
+
+  #contact div {
+    display: none; }
+
+  #contact address {
+    display: inline;
+    position: relative;
+    top: -24px; }
+
+  #contact {
+    height: 60px;
+    padding: 10px; }
+
+  #contact span {
+    height: 40px; }
+
+  header ul {
+    clear: both;
+    float: left;
+    width: 100%; }
+
+  .mosaic article {
+    padding: 0 10px;
+    text-align: center;
+    width: 100%; }
+
+  .mosaic img {
+    height: 198px;
+    width: 300px; } }

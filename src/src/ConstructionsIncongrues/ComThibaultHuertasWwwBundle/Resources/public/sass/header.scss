@@ -1,0 +1,53 @@
+@import "mixin";
+@import "typography";
+@import "colors";
+
+header {
+  @include bg-blue;
+  color: $color-grey;
+  font-family: $regular;
+  font-size: $font-small;
+  height: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+
+  img,
+  ul {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  aside {
+    float: left;
+    margin-left: 10px;
+    min-width: 10%;
+    }
+}
+
+header nav {
+  float: right;
+  margin-right: 10px;
+  max-width: 90%;
+  li {
+    display: inline;
+    margin: 0 5px;
+    &.selected a{ color: $color-selected; }
+    a { color: $color-grey-4; }
+    a:hover { color: $color-selected; }
+ }
+}
+
+.intro {
+  @include bg-blue;
+  padding: 0 10px;
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  aside {
+    border: 1px solid transparent;
+    text-align: center;
+  }
+}
+
+

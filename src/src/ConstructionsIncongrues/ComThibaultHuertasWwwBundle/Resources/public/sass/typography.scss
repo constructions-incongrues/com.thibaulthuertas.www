@@ -1,0 +1,14 @@
+@font-face { font-family: 'Regular';	src: url('../font/aller_lt-webfont.ttf'); }
+@font-face { font-family: 'Regularita';src: url('../font/aller_ltit-webfont.ttf'); }
+
+$regular: 'Regular', sans-serif;
+$regularita : 'Regularita', sans-serif;
+
+$base-font-size:16px;
+
+@function em ($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0}
+  @return $target / $context + 0em;
+}
+
+$font-small:em(12px);
