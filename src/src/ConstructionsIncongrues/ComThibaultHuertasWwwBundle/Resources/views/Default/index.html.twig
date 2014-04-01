@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<section  role="main" class="mosaic">
+{# <!-- <section  role="main" class="mosaic">
   <article class="mosaic-block fade">
 <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
           <span class="mosaic-overlay"> 
@@ -29,6 +29,41 @@
         </span>
         </article>
     <hr />
-</section>
+</section> --> #}
+<div class="content1_content" id="projects">
+
+  {% for project in projects %}
+
+    {% if loop.index0 == 0 %}
+  <div class="grid_6 column1">
+    <ul >
+    {% elseif loop.index0 == (loop.length // 2) %}
+    </ul>
+  </div>
+  <div class="grid_6 column2">
+    <ul >
+    {% endif %}
+
+      <li class="mosaic-block fade">
+        <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
+          <span class="mosaic-overlay"> 
+            <span class="details">    
+              <h1>{{ project.title }}</h1>
+              <hr />
+              <h2>{{ project.hover }}</h2>
+            </span>
+          </span>
+        </a>
+        <span class="mosaic-backdrop">
+          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
+        </span>
+      </li>
+    {% if loop.index == loop.length + 2 %}
+    </ul>
+  </div>
+    {% endif %}
+  {% endfor %}
+</div><!-- .content1_content -->
+</div>
 
 {% endblock %}
