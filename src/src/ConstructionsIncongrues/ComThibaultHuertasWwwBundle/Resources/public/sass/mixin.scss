@@ -1,14 +1,14 @@
 @mixin bg-blue {
-  background-image:url(../img/pattern-blue.png);
-	background-repeat: repeat;
+  background-image: url('../img/pattern-blue.png');
+  background-repeat: repeat;
 }
 
 @mixin bg-grey {
-	background-image: url(../img/pattern-grey.png);
+  background-image: url('../img/pattern-grey.png');
   background-repeat: repeat;
 }
 
 @mixin bg-black {
-  background-image: url(../img/pattern-black.png);
+  background-image: url('../img/pattern-black.png');
   background-repeat: repeat;
 }

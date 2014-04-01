@@ -18,7 +18,7 @@
 
   <link rel="icon" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/favicon.png') }}" />
 
-{% stylesheets filter="compass" output="css/all.css" "@ConstructionsIncongruesComThibaultHuertasWwwBundle/Resources/public/sass/*.scss" %}
+{% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/sass/*.scss" filter="compass,cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
   <link rel="stylesheet" href="{{ asset_url }}"/>
 {% endstylesheets %}
 
