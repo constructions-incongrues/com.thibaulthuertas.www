@@ -16,8 +16,8 @@ a { text-decoration: none; }
   #contact address { display: none; }
   .intro img { height: auto; max-width: 100%; }
   .mosaic img { height: 338px; width: 510px; }
-  .mosaic article:nth-child(odd) { margin-right: 20px; padding-left: 10px; text-align: left; }
-  .mosaic article:nth-child(even) { padding-right: 10px; text-align: right; }
+  .mosaic article:nth-child(odd) { margin-right: 20px; margin-left: 10px; text-align: left; }
+  .mosaic article:nth-child(even) { margin-right: 10px; text-align: right; }
   .mosaic article {display: block; float: left;}
 }
 

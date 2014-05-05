@@ -17,11 +17,11 @@
 }
 
 .projet hr {
-  border: 0 0 2px 0;
-  border-color: $color-black;
-  border-style: solid;
-  line-height: 1px;
-  width: 18px;
+
+border: 0;
+line-height: 1;
+border-bottom: 2px solid #191919;
+width: 18px;
 
 }
 
@@ -44,6 +44,7 @@
 }
 
 .projet nav {
+  a img {padding:10px;}
   li {
     display: inline;
     opacity: .6;
@@ -52,19 +53,10 @@
  }
 }
 
-.projet {
-  ul {
+.projet ul {
     margin: 20px;
-    li {
-      color: $color-grey-2;
-      font-size: $font-small;
-      a {
-        color: $color-black;
-        text-decoration: none;
-        &:hover { text-decoration: underline; }
-   }
-  }
- }
+    color: $color-grey-2;
+    font-size: $font-small;
 }
 
 .capture img {
@@ -73,3 +65,8 @@
   padding: 20px 0;
   &:first-child { margin-top: 80px; }
 }
+.projet a {
+        color: $color-black;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+   }

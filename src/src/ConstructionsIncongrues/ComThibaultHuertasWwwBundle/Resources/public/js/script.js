@@ -6,8 +6,8 @@ $(document).ready(function() {
 	$('.fade').mosaic();
 
 	// "Caillou" size on home page
-	$('.caillou').height(document.body.clientHeight - 64);
+	$('.caillou').height(window.innerHeight - 64);
 	$(window).resize(function() {
-		$('.caillou').height(document.body.clientHeight - 64);
+		$('.caillou').height(window.innerHeight - 64);
 	});
 });
