@@ -15,13 +15,7 @@ a { text-decoration: none; }
   .equal, #contact span{ margin: auto; width: 940px;}
   #contact address { display: none; }
   // .intro img { height: auto; max-width: 100%; }
-    .intro img { position: absolute;
-top: 50%;
-left: 50%;
-width: 639px;
-height: 356px;
-margin-top: -229px;
-margin-left: -319.5px; }
+    .intro img { position: absolute; top: 50%; left: 50%; width: 639px; height: 356px; margin-top: -229px; margin-left: -319.5px; }
   .mosaic img { height: 338px; width: 510px; }
   .mosaic article:nth-child(odd) { margin-right: 20px; margin-left: 10px; text-align: left; }
   .mosaic article:nth-child(even) { margin-right: 10px; text-align: right; }
@@ -44,7 +38,7 @@ margin-left: -319.5px; }
   #contact { height: 60px;padding: 10px; }
   #contact span { height: 40px;float:right;}
   header ul { clear: both; float: left; width: 100%; }
-  .mosaic article,.caption { padding: 0 10px; text-align: center; width: 100%;}
+  .mosaic article { padding: 0 10px; text-align: center; width: 100%;}
   .mosaic img { height: 198px; width: 300px; }
 }
 

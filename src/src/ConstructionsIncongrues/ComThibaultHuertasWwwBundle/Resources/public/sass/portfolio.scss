@@ -71,7 +71,7 @@ width: 18px;
    }
 
 // CAPTiON HOVER
-   .caption-style-4{
+    .caption-style-4{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -79,6 +79,7 @@ width: 18px;
   }
 
   .caption-style-4 article{
+     float: left;
     padding: 0px;
     position: relative;
     overflow: hidden;
@@ -90,18 +91,18 @@ width: 18px;
 
   .caption-style-4 article:hover img{
     opacity: 1;
-    transform: scale(1.15,1.15);
-    -webkit-transform:scale(1.15,1.15);
-    -moz-transform:scale(1.15,1.15);
-    -ms-transform:scale(1.15,1.15);
-    -o-transform:scale(1.15,1.15);
+    // transform: scale(1.15,1.15);
+    // -webkit-transform:scale(1.15,1.15);
+    // -moz-transform:scale(1.15,1.15);
+    // -ms-transform:scale(1.15,1.15);
+    // -o-transform:scale(1.15,1.15);
   }
 
 
   .caption-style-4 img{
     margin: 0px;
     padding: 0px;
-    float: left;
+     float: left;
     z-index: 4;
   }
 
@@ -132,13 +133,8 @@ width: 18px;
   }
 
   .caption-style-4 .caption-text h1{
-    font-size: 22px;
-    font-family: 'Regular', sans-serif;
-  }
-    .caption-style-4 .caption-text h2{
-    font-size: 14px;
-    font-family: 'Regular', sans-serif;
-
+    text-transform: uppercase;
+    font-size: 24px;
   }
   .caption-style-4 .caption-text{
     z-index: 10;
@@ -146,6 +142,7 @@ width: 18px;
     position: absolute;
 
     text-align: center;
+    top:100px;
   }
 
 @media all and (min-width:1060px) {
