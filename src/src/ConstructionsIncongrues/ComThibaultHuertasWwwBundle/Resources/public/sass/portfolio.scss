@@ -69,3 +69,94 @@ width: 18px;
         text-decoration: none;
         &:hover { text-decoration: underline; }
    }
+
+// CAPTiON HOVER
+   .caption-style-4{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+
+  .caption-style-4 article{
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .caption-style-4 article:hover .caption{
+    opacity: 1;
+  }
+
+  .caption-style-4 article:hover img{
+    opacity: 1;
+    transform: scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+    -ms-transform:scale(1.15,1.15);
+    -o-transform:scale(1.15,1.15);
+  }
+
+
+  .caption-style-4 img{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 4;
+  }
+
+
+  .caption-style-4 .caption{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+  }
+
+  .caption-style-4 img{
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    -ms-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+  }
+  .caption-style-4 .blur{
+    background-color: rgba(0,0,0,0.65);
+
+    z-index: 5;
+    position: absolute;
+  }
+
+  .caption-style-4 .caption-text h1{
+    font-size: 22px;
+    font-family: 'Regular', sans-serif;
+  }
+    .caption-style-4 .caption-text h2{
+    font-size: 14px;
+    font-family: 'Regular', sans-serif;
+
+  }
+  .caption-style-4 .caption-text{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+
+    text-align: center;
+  }
+
+@media all and (min-width:1060px) {
+  .caption-style-4 .caption-text,.caption-style-4 .blur  { height: 338px; width: 510px; }
+}
+
+@media all and (max-width:1060px) {
+  .caption-style-4 .caption-text,.caption-style-4 .blur  { height: 338px; width: 510px; }
+}
+
+@media all and (max-width:510px) {
+  .caption-style-4 .caption-text,.caption-style-4 .blur   { height: 198px; width: 300px; }
+}
+
