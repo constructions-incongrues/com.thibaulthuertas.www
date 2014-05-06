@@ -37,6 +37,11 @@
 
   $('.show_hide').click(function() {
     $("#contact").slideToggle();
+    $('.intro img').css('position', 'relative');
+    $('.intro img').css('top', 0);
+    $('.intro img').css('left', 0);
+    $('.intro img').css('marginTop', 64);
+    $('.intro img').css('marginLeft', 0);
     return false;
   });
 
