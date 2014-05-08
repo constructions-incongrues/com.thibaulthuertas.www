@@ -31,10 +31,7 @@ class DefaultController extends Controller
         foreach ($projects as $project) {
             try {
                 $this->get('kernel')->locateResource('@ConstructionsIncongruesComThibaultHuertasWwwBundle/Resources/public/assets/projects/'.$project->getSlug());
-                $path = '/home/trivoallan/dev/sources/constructions-incongrues/com.thibaulthuertas.www/src/web/bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/'.$project->getSlug();
-                if (is_readable($path)) {
-                    $projectsExisting[] = $project;
-                }
+                $projectsExisting[] = $project;
             } catch (\InvalidArgumentException $e) {
 
             }
