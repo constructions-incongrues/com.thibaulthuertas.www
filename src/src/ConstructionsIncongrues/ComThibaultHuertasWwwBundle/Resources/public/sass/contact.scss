@@ -1,0 +1,66 @@
+@import "mixin";
+@import "typography";
+@import "colors";
+
+#contact {
+  @include bg-black;
+  color: $color-grey-3;
+  font-family: $regular;
+  padding: 0 10px;
+}
+
+#contact span {
+  display: block;
+  height: 80px;
+  text-align: right;
+  img {
+    height: 22px;
+    position: relative;
+    top: 50%;
+    width: 22px;
+}
+  a { opacity: .4;
+    &:hover { opacity: 1;
+  } }
+}
+
+#contact {
+  h1,
+  h2 {
+    color: $color-white;
+    font-size: em(23px);
+    padding: 20px 0 0;
+    text-transform: capitalize;
+  }
+  hr {
+    border: 0;
+    border-bottom:1px;
+    border-color: $color-grey-3;
+    border-style: solid;
+    line-height: 1px;
+    margin: 20px 0;
+    width: 18px;
+  }
+  p {
+    font-size: em(12px);
+    line-height: 16px;
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+  li {
+    font-size: em(12px);
+    line-height: 16px;
+ }
+}
+
+#contact a {
+  color: $color-blue;
+  &:hover {text-decoration: underline;}
+}
+
+.equal { display: table; }
+.row { display: table-row; }
+.row article {
+  display: table-cell;
+  padding: 0 0 80px;
+}

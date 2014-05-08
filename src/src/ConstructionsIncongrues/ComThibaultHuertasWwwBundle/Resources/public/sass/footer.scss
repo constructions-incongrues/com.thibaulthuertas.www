@@ -1,0 +1,43 @@
+@import "mixin";
+@import "typography";
+@import "colors";
+
+footer {
+  @include bg-blue;
+  bottom: 0;
+  color: $color-grey-4;
+  font-family: $regular;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  width: 100%;
+  section {
+    display: inline-block;
+    line-height: 1.1;
+    vertical-align: middle;
+  }
+}
+
+footer ul {
+  display: inline;
+  vertical-align: middle;
+  li {
+    font-size: $font-small;
+    list-style: none;
+    padding: 6px;
+  }
+  a { color: $color-grey-4; }
+  a:hover { color: $color-selected; }
+}
+
+footer ul:nth-child(2) {
+  li {
+    display: inline;
+    margin: 10px 0;
+    opacity: .6;
+    padding: 15px;
+    &:hover { opacity: 1; }
+ }
+}
+
+address { margin-bottom: 20px; }

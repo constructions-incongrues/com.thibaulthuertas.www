@@ -1,11 +1,12 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>
     {% block title %}{% endblock %}
@@ -13,84 +14,164 @@
   </title>
 	<meta name="description" content="Designer graphique indépendant basé à Paris">
 
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/favicon.png') }}" />
 
-  <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/reset.css') }}"/>
-  <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/text.css') }}"/>
-  <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/lib/960.gs/fluid_grid.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/mosaic.css') }}" type="text/css" media="screen" />
-
-  <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/css-sticky-footer.css') }}">
-
-  <link rel="stylesheet" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/css/main.css') }}">
-  
+{% stylesheets "components/captionss/captionss.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  <link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+{% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/sass/*.scss" filter="compass,cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  <link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+{% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/css/*.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  <link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
 	<script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/modernizr-2.0.6.min.js') }}"></script>
-    
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+  $(document).ready(function(){
+
+  $("#contact").hide();
+  $(".show_hide").show();
+
+  $('.show_hide').click(function() {
+    $("#contact").slideToggle();
+    $('.intro img').css('position', 'relative');
+    $('.intro img').css('top', 0);
+    $('.intro img').css('left', 0);
+    $('.intro img').css('marginTop', 64);
+    $('.intro img').css('marginLeft', 0);
+    return false;
+  });
+
+});
+
+</script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+
+$("#contact").outerHeight();
+
+$("#contact").height();
+
+});
+
+</script>
 </head>
 <body>
 
 <div id="wrapper" class="container_12">
 
-<header role="banner">
-  <div class="header grid_12 {% block header_class %}{% endblock %}">
-    <div class="header_content">
-      <div class="logo grid_8 ">
-        <p>
-           <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
-           <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" alt="Logo"/>
-          </a>
-         </p>
-      </div>  <!-- .logo -->
+<section id="contact">
+    <span role="application"><a href="" class="show_hide"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/contact-close.png') }}" alt="Close"></a></span>
+ <address>
+      <ul>
+       <li><a href="mailto:contact@thibaulthuertas.com">contact@thibaulthuertas.com</a></li>
+       <li>+ 33.6.10.68.41.33</li>
+      </ul>
+    </address>
+<div class="equal">
 
-      <div class="navbar grid_4 ">
-        <ul>
+<div class="row">
+  <article>
+    <h1>Une petite présentation</h1>
+  <hr />
+  <p>Je m'appelle Thibault Huertas et je suis designer graphique freelance à Paris.</p>
+  <p>
+    Web designer, puis directeur artistique chez <a href="http://www.kernix.com/" target="_blank">Kernix</a>, une agence spécialisée dans le développement d'application web et mobile, j'ai pu concevoir divers projets interactifs avec une clientèle variée.
+  </p>
+  <p>
+    Autonome et perfectionniste, mon plaisir sera de concevoir un design de qualité qui répondra à vos besoins. J'attache une grande importance à créer des interfaces innovantes et originales.
+  </p>
+  <p>Direction artistique / design graphique / web design / icones / illustrations / identités visuelles / logos</p>
+
+  <h2>Récompenses</h2>
+  <hr />
+
+  <ul>
+    <li>Lauréat du concours <a href="http://www.csswinner.com/details/-da-heard-it-records/3154/" target="_blank">CSS Winner</a> pour le site <a href="/project/da-heard-it-records#project">Da ! Heard It Records</a>
+  </ul>
+  </article>
+
+  <article>
+     <h1>Restons en contact</h1>
+   <hr />
+    <p>
+      N'hésitez pas à me contacter si vous avez une question, ou pour faire connaissance.
+      Je suis actuellement disponible en freelance.
+    </p>
+   <hr />
+    <ul>
+     <li><a href="mailto:contact@thibaulthuertas.com">contact@thibaulthuertas.com</a></li>
+     <li>+ 33.6.10.68.41.33</li>
+     </ul>
+    <hr />
+     <ul>
+       <li><a href="http://www.behance.net/thibaulthuertas" target="_blank">Behance</a></li>
+       <li><a href="http://www.flickr.com/photos/14850436@N05/" target="_blank">Flickr</a></li>
+       <li><a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank">Linkedin</a></li>
+    </ul>
+</div>
+
+</article>
+<div>
+
+</section>
+
+
+<header role="banner">
+  <section>
+
+    <aside>
+        <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
+           <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" alt="Logo"/>
+    </aside>
+
+    <nav role="navigation">
+            <ul>
           <li class="{% block navbar_class_homepage %}{% endblock %}"><a class="" href="{{ path('homepage') }}" title="Retourner à la page d'accueil">Accueil</a></li>
           <li class="{% block navbar_class_projects %}{% endblock %}"><a class="{% block navbar_class_smooth %}smooth{% endblock %}" href="{{ path('homepage') }}#projects" title="Consulter la liste des projets">Projets</a></li>
-          <li class="{% block navbar_class_contact %}{% endblock %}"><a class="" href="{{ path('contact') }}" title="Contacter Thibault">Contact</a></li>
-        </ul> 
-      </div><!-- .navbar -->
+          <li><a href="#contact" class="show_hide" title="">Contact</a></li>
 
-      <div class="clear"> </div>
+        </ul>
+    </nav>
+  </section>
+</header>
       {% block caillou %}
       {% endblock %}
-  </div><!-- .header -->
-    </div> <!-- .header_content -->
-  </header>
 
-<div class="grid_12 content1">
+<section  role="main" class="mosaic">
   {% block content %}
-  <!-- block content --> 
+  <!-- block content -->
   {% endblock %}
-</div><!-- .content1-->
-</div><!-- #wrapper -->
-</div><!-- ??? -->
-</div><!-- ??? -->
+</section>
 
 <footer role="contentinfo">
+  <section>
+    <ul>
+      <li><a href="mailto:contact@thibaulthuertas.com">contact@thibaulthuertas.com</a></li>
+      <li>+ 33.6.10.68.41.33</li>
+    </ul>
 
-  <div class="footer_content">
-    <p class="footer_content_mail">
-      <a href="mailto:contact@thibaulthuertas.com" title"">contact@thibaulthuertas.com</a>
-    </p>
-    <p class="footer_content_phone">
-      + 33.6.10.68.41.33
-    </p>
-    <ul class="footer_icon">
+    <ul>
+      <ul class="footer_icon">
       <li> <a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/linkedin.png') }}" alt="Linkedin" /></a></li>
       <li> <a href="http://www.flickr.com/photos/14850436@N05/" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="Flickr" /></a></li>
       <li> <a href="http://www.behance.net/thibaulthuertas" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/behance.png') }}" alt="Behance" /></a></li>
     </ul>
-</div><!-- .footer_content -->
+  </section>
 </footer>
-</div><!-- .container_12 -->
 
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                     <script>window.jQuery || document.write('<script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/jquery') }}-1.7.1.min.js"><\/script>')</script>
                     <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/mosaic.1.0.1.js') }}"></script>
                     <script type="text/javascript" src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/jquery-smooth-scroll/jquery.smooth-scroll.min.js') }}"></script>
-                    
+
                     <!-- scripts concatenated and minified via ant build script-->
                     <script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/plugins.js') }}"></script>
                     <script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/script.js') }}"></script>

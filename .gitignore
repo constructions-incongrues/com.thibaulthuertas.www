@@ -26,3 +26,6 @@
 /src/*/cache/*
 /src/web/uploads/*
 /src/web/bundles/*
+
+# Sass
+/.sass-cache

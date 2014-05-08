@@ -1,0 +1,63 @@
+@import "compass/reset";
+@import "typography";
+@import "header";
+@import "contact";
+@import "portfolio";
+@import "footer";
+@import "colors";
+
+body { @include bg-grey;}
+
+a { text-decoration: none; }
+
+@media all and (min-width:1060px) {
+  header section,.mosaic,#projets, footer section, .intro+aside { margin: auto; width: 1060px; }
+  .equal, #contact span{ margin: auto; width: 940px;}
+  #contact address { display: none; }
+  // .intro img { height: auto; max-width: 100%; }
+    .intro img { position: absolute;
+top: 50%;
+left: 50%;
+width: 639px;
+height: 356px;
+margin-top: -229px;
+margin-left: -319.5px; }
+  .mosaic img { height: 338px; width: 510px; }
+  .mosaic article:nth-child(odd) { margin-right: 20px; margin-left: 10px; text-align: left; }
+  .mosaic article:nth-child(even) { margin-right: 10px; text-align: right; }
+  .mosaic article {display: block; float: left;}
+  figure.overlay img {width: 510px;}
+}
+
+@media all and (max-width:1060px) {
+  header section,.mosaic,#projets,footer section { margin: auto; max-width: 1060px; }
+  .mosaic article { padding: 0 10px; text-align: center; width: 100%;  }
+  #contact address { display: none; }
+  .intro img { height: auto; max-width: 100%; }
+  .mosaic img { height: 338px; max-width: 510px; }
+  figure.overlay img {width: 510px;}
+
+}
+
+@media all and (max-width:510px) {
+  header section, .mosaic,  #projets, footer section { margin: auto; max-width: 510px; }
+  .intro { display: none; }
+  #contact div { display: none; }
+  #contact address { display: inline; position: relative;float:left;top:13px; }
+  #contact { height: 60px;padding: 10px; }
+  #contact span { height: 40px;float:right;}
+  header ul { clear: both; float: left; width: 100%; }
+  .mosaic article { padding: 0 10px; text-align: center; width: 100%;}
+  .mosaic img { height: 198px; width: 300px; }
+  figure.overlay img {width: 300px;}
+}
+
+/* huertas theme */
+figure.embed.huertas figcaption,
+figure.embed-top.huertas figcaption,
+figure.overlay.huertas figcaption,
+figure.embed-over.huertas figcaption,
+figure.huertas figcaption {
+  color: rgba(245,245,245,1.0);
+  background: rgba(50,50,50,0.7);
+}

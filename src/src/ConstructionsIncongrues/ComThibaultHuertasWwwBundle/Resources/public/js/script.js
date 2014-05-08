@@ -1,13 +1,13 @@
 $(document).ready(function() {
-	// Smooth scrolling for same page links
-	$('div.navbar a.smooth').smoothScroll();
+    // Smooth scrolling for same page links
+    $('div.navbar a.smooth').smoothScroll();
 
-	// Projects covers
-	$('.fade').mosaic();
+    // Projects covers
+    $('.fade').mosaic();
 
-	// "Caillou" size on home page
-	$('.caillou').height(document.body.clientHeight - 64);
-	$(window).resize(function() {
-		$('.caillou').height(document.body.clientHeight - 64);
-	});
+    // "Caillou" size on home page
+    $('.caillou').height(window.innerHeight - 64);
+    $(window).resize(function() {
+        $('.caillou').height(window.innerHeight - 64);
+    });
 });
