@@ -12,36 +12,48 @@ use ConstructionsIncongrues\ComThibaultHuertasWwwBundle\Entity\ContactMessage;
 class DefaultController extends Controller
 {
     /**
-     * 
-     * 
+     *
+     *
      * @Route("/", name="homepage")
      * @Template("ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:index.html.twig")
      */
     public function indexAction()
     {
-    	$em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getEntityManager();
 
-    	$projects = $em->getRepository('ConstructionsIncongruesComThibaultHuertasWwwBundle:Project')->findBy(array('is_enabled' => true), array('date_released' => 'DESC'));
+        $projects = $em->getRepository('ConstructionsIncongruesComThibaultHuertasWwwBundle:Project')->findBy(
+            array('is_enabled' => true),
+            array('date_released' => 'DESC')
+        );
 
-    	return array('projects' => $projects);
+        // On n'affiche pas les projets incomplets
+        $projectsExisting = array();
+        foreach ($projects as $project) {
+            $path = '/home/trivoallan/dev/sources/constructions-incongrues/com.thibaulthuertas.www/src/web/bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/'.$project->getSlug();
+            if (is_readable($path)) {
+                $projectsExisting[] = $project;
+            }
+        }
+
+        return array('projects' => $projectsExisting);
     }
 
     /**
      * Displays project page.
-     * 
+     *
      * @Route("/project/{slug}", name="project_show")
      * @Template("ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:project.html.twig")
      */
     public function projectShowAction($slug)
     {
         // Instanciate project entity repository
-    	$repository = $this->getDoctrine()->getEntityManager()->getRepository('ConstructionsIncongruesComThibaultHuertasWwwBundle:Project');
+        $repository = $this->getDoctrine()->getEntityManager()->getRepository('ConstructionsIncongruesComThibaultHuertasWwwBundle:Project');
 
         // Fetch project corresponding to slug
-    	$project = $repository->findOneBy(array('slug' => $slug, 'is_enabled' => true));
-	    if (!$project) {
-	        throw $this->createNotFoundException(sprintf('No project found for slug "%s"', $slug));
-	    }
+        $project = $repository->findOneBy(array('slug' => $slug, 'is_enabled' => true));
+        if (!$project) {
+            throw $this->createNotFoundException(sprintf('No project found for slug "%s"', $slug));
+        }
 
         // Fetch surrounding projects
         $projectPrevious = $repository->getPrevious($project->getDateReleased());
@@ -49,15 +61,15 @@ class DefaultController extends Controller
 
         // Pass data to view
         return array(
-            'project' => $project, 
-            'projectPrevious' => $projectPrevious, 
+            'project' => $project,
+            'projectPrevious' => $projectPrevious,
             'projectNext' => $projectNext
         );
     }
 
     /**
      * Displays contact page.
-     * 
+     *
      * @Route("/contact", name="contact")
      * @Template("ConstructionsIncongruesComThibaultHuertasWwwBundle:Default:contact.html.twig")
      */
@@ -71,10 +83,10 @@ class DefaultController extends Controller
             ->add('phone', 'text')
             ->add('message', 'text')
             ->getForm();
-        
+
         if ($request->getMethod() == 'POST') {
             $form->bindRequest($request);
-            
+
             // Validate form
             if ($form->isValid()) {
                 // Send email
@@ -101,5 +113,4 @@ class DefaultController extends Controller
 
         return array('form' => $form->createView());
     }
-
 }

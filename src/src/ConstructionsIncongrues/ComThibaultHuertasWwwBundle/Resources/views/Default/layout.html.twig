@@ -18,6 +18,9 @@
 
   <link rel="icon" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/favicon.png') }}" />
 
+{% stylesheets "components/captionss/captionss.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  <link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
 {% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/sass/*.scss" filter="compass,cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
   <link rel="stylesheet" href="{{ asset_url }}"/>
 {% endstylesheets %}

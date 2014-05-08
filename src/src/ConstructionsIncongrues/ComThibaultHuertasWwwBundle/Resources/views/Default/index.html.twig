@@ -13,27 +13,26 @@
 {% endblock %}
 
 {% block content %}
- 
-<section  role="main" class="mosaic">
- 
+
+<section role="main" class="mosaic">
+
   {% for project in projects %}
- 
-  <article class="mosaic-block fade">
+
+  <article>
     <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
-      <span class="mosaic-overlay"> 
-        <span class="details">    
+      <figure class="overlay reveal-smooth huertas">
+        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
+        <figcaption>
           <h1>{{ project.title }}</h1>
           <hr />
           <h2>{{ project.hover }}</h2>
-        </span>
-      </span>
+        </figcaption>
+      </figure>
     </a>
-    <span class="mosaic-backdrop">
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
-    </span>
   </article>
+
 {% endfor %}
   <hr />
 </section>
- 
+
 {% endblock %}
