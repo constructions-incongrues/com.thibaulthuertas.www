@@ -13,6 +13,9 @@
 !/etc/common
 !/etc/puppet
 
+# sass
+.sass-cache
+
 # symfony2 (@see https://github.com/github/gitignore/blob/master/Symfony2.gitignore)
 # -- Bootstrap
 /src/app/bootstrap*
