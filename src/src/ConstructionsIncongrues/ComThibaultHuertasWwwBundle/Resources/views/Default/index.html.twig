@@ -23,9 +23,11 @@
       <figure class="overlay reveal-smooth huertas">
         <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
         <figcaption>
-          <h1>{{ project.title }}</h1>
-          <hr />
-          <h2>{{ project.hover }}</h2>
+        <div class="details">
+            <h1>{{ project.title }}</h1>
+              <hr />
+            <h2>{{ project.hover }}</h2>
+            </div>
         </figcaption>
       </figure>
     </a>
