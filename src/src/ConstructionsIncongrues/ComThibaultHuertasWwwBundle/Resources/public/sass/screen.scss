@@ -46,25 +46,7 @@ a { text-decoration: none; }
   figure.overlay img {width: 300px;}
 }
 
-  header {background: url(../img/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: top 200px;}
-
-  /* Theme Captionss */
-  figure.embed.huertas figcaption,
-  figure.embed-top.huertas figcaption,
-  figure.overlay.huertas figcaption,
-  figure.embed-over.huertas figcaption,
-  figure.huertas figcaption {
-  color: rgba(245,245,245,1.0);
-  background: rgba(0,0,0,0.8);
-}
-
-figcaption {
-  font-family: 'Regular', sans-serif;
-  text-align: center;
-
-  h1 {font-size:1.4rem;margin-bottom: 27px;}
-  h2 {font-style:0.9rem;margin-top: 30px;}
-}
+ header {background: url(../img/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: top 200px;}
 
 .details {
   @include vertical-align;
@@ -76,18 +58,5 @@ width:26px;
 visibility: visible;}
 }
 
-section.nav, #contact {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0;
-}
 
-.slideOutUp {
-  -webkit-animation-duration: 1s;
-}
 
-.slideInDown {
-  -webkit-animation-duration: 250ms;
-}
