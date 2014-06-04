@@ -29,3 +29,8 @@
 
 # Sass
 /.sass-cache
+compiled/*.css
+
+# ide
+*.sw*
+*.orig
