@@ -1,6 +1,10 @@
 $(document).ready(function() {
-    // Smooth scrolling for same page links
-    $('div.navbar a.smooth').smoothScroll();
+
+    $('.smooth').click(function(e) {
+        var hash = $(this).attr('href').match(/^.*(#.*)$/)[1];
+        $.scrollTo(hash, 500);
+        return false;
+    });
 
     // Projects covers
     $('.fade').mosaic();
