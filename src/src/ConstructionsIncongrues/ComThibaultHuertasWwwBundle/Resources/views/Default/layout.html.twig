@@ -140,9 +140,10 @@
       </nav>
       </div>
     </section>
-   <header>
-    
-  </header>
+    {% block header %}
+    <header>
+    </header>
+    {% endblock %}
     {% block caillou %}
      {% endblock %}
 
@@ -159,7 +160,7 @@
         <li>+ 33.6.10.68.41.33</li>
       </ul>
 
-    
+
         <ul class="footer_icon">
           <li> <a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/linkedin.png') }}" alt="Linkedin" /></a></li>
           <li> <a href="http://www.flickr.com/photos/14850436@N05/" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="Flickr" /></a></li>

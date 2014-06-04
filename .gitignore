@@ -29,7 +29,7 @@
 
 # Sass
 /.sass-cache
-compiled/*.css
+src/src/ConstructionsIncongrues/ComThibaultHuertasWwwBundle/Resources/public/compiled/
 
 # ide
 *.sw*
