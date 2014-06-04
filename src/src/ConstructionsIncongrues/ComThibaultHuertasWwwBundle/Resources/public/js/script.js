@@ -5,6 +5,12 @@ $(document).ready(function() {
     // Projects covers
     $('.fade').mosaic();
 
+    // Fixed nav
+    $('section.nav').headroom({
+        offset: 205,
+        tolerance: 5
+    });
+
     // "Caillou" size on home page
     $('header').height(window.innerHeight);
     $(window).resize(function() {

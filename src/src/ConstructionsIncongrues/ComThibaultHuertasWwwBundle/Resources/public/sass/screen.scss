@@ -47,7 +47,7 @@ a { text-decoration: none; }
 }
 
   header {background: url(../img/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: top 200px;}
-  
+
   /* Theme Captionss */
   figure.embed.huertas figcaption,
   figure.embed-top.huertas figcaption,
@@ -74,4 +74,14 @@ border-color: #fff;
 border-style: solid;
 width:26px;
 visibility: visible;}
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }
