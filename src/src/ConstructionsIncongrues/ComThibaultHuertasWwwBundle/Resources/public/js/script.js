@@ -16,9 +16,12 @@ $(document).ready(function() {
     });
 
     // Fixed nav
-    $('section.nav').headroom({
-        'offset': 205,
-        'tolerance': 5,
+    $('section.nav, #contact').headroom({
+        'offset': 0,
+        'tolerance': {
+            'up': 0,
+            'down': 0
+        },
         'classes': {
             'initial': 'animated',
             'pinned': 'slideInDown',
