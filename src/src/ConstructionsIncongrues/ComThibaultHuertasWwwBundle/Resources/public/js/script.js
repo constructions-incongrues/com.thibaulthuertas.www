@@ -5,6 +5,16 @@ $(document).ready(function() {
     // Projects covers
     $('.fade').mosaic();
 
+    $('#contact').outerHeight();
+    $('#contact').height();
+    $('#contact').hide();
+    $('.show_hide').show();
+
+    $('.show_hide').click(function() {
+        $('#contact').slideToggle();
+        return false;
+    });
+
     // Fixed nav
     $('section.nav').headroom({
         'offset': 205,
