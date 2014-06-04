@@ -7,8 +7,15 @@ $(document).ready(function() {
 
     // Fixed nav
     $('section.nav').headroom({
-        offset: 205,
-        tolerance: 5
+        'offset': 205,
+        'tolerance': 5,
+        'classes': {
+            'initial': 'animated',
+            'pinned': 'slideInDown',
+            'unpinned': 'slideOutUp',
+            'top': 'headroom--top',
+            'notTop': 'headroom--not-top'
+        }
     });
 
     // "Caillou" size on home page
