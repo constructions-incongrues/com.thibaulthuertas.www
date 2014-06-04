@@ -49,7 +49,8 @@ width: 18px;
     display: inline;
     opacity: .6;
     padding: 0 20px;
-    &:hover { opacity: 1; }
+    a:hover {text-decoration: none;}
+    &:hover { opacity: 1;}
  }
 
 }
