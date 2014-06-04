@@ -5,10 +5,16 @@ $(document).ready(function() {
     // Projects covers
     $('.fade').mosaic();
 
-    
     // "Caillou" size on home page
-    $('header').height(window.innerHeight );
+    $('header').height(window.innerHeight);
     $(window).resize(function() {
-        $('header').height(window.innerHeight);
+        if (document.documentElement.clientWidth > 640) {
+            $('.intro').show();
+            $('header').show();
+            $('header').height(window.innerHeight);
+        } else {
+            $('header').hide();
+            $('.intro').hide();
+        }
     });
 });
