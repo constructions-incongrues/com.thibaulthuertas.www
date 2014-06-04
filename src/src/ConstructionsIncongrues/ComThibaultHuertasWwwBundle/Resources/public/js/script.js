@@ -5,6 +5,7 @@ $(document).ready(function() {
     // Projects covers
     $('.fade').mosaic();
 
+    
     // "Caillou" size on home page
     $('header').height(window.innerHeight );
     $(window).resize(function() {

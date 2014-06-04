@@ -5,7 +5,7 @@
 .mosaic,
 .projet {
   margin: 0 auto;
-  padding: 70px 0 53px;
+  padding: 50px 0 53px;
 }
 
 .mosaic {
@@ -38,7 +38,8 @@ width: 18px;
       font-size: em(16px);
       margin: 0 auto;
       margin-bottom: 50px;
-      max-width: 940px;
+      max-width: 700px;
+      line-height: 21px;
   }
  }
 }
@@ -50,10 +51,12 @@ width: 18px;
     padding: 0 10px;
     &:hover { opacity: 1; }
  }
+
 }
 
-.projet ul {
+.projet p {
     margin: 20px;
+    line-height: 20px;
     color: $color-grey-2;
     font-size: $font-small;
 }

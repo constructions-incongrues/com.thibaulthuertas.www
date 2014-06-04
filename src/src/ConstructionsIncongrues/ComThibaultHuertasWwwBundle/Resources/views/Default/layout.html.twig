@@ -123,10 +123,8 @@
      </article>
    </section>
 
-
-   <header role="banner">
-    <section>
-
+<section class="nav" role="banner">
+<div class="test">
       <aside>
         <a href="{{ path('homepage') }}" title="Retourner à la page d'accueil">
          <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/logo.png') }}" alt="Logo"/>
@@ -140,10 +138,15 @@
 
         </ul>
       </nav>
+      </div>
     </section>
+   <header>
+    
   </header>
+    {% block caillou %}
+     {% endblock %}
 
-  <section  role="main" class="mosaic">
+  <section role="main" class="mosaic" id="projects">
     {% block content %}
     <!-- block content -->
     {% endblock %}
@@ -156,7 +159,7 @@
         <li>+ 33.6.10.68.41.33</li>
       </ul>
 
-      <ul>
+    
         <ul class="footer_icon">
           <li> <a href="http://www.linkedin.com/pub/thibault-huertas/16/a14/b6a" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/linkedin.png') }}" alt="Linkedin" /></a></li>
           <li> <a href="http://www.flickr.com/photos/14850436@N05/" target="_blank"><img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/footer/flickr.png') }}" alt="Flickr" /></a></li>

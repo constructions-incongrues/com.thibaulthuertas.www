@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Regular';
+  src: url("../../../../bundles/constructionsincongruescomthibaulthuertaswww/font/aller_lt-webfont.ttf");
+}
+
+@font-face {
+  font-family: 'Regularita';
+  src: url("../../../../bundles/constructionsincongruescomthibaulthuertaswww/font/aller_ltit-webfont.ttf");
+}
+
+/* line 5, assetic_compassl6Hvor.scss */
+footer {
+  background-image: url("../../../../bundles/constructionsincongruescomthibaulthuertaswww/img/pattern-blue.png");
+  background-repeat: repeat;
+  bottom: 0;
+  color: #7f7f7f;
+  font-family: "Regular", sans-serif;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  width: 100%;
+}
+/* line 14, assetic_compassl6Hvor.scss */
+footer section {
+  display: inline-block;
+  line-height: 1.1;
+  vertical-align: middle;
+}
+
+/* line 21, assetic_compassl6Hvor.scss */
+footer ul {
+  display: inline;
+  vertical-align: middle;
+}
+/* line 24, assetic_compassl6Hvor.scss */
+footer ul li {
+  font-size: 0.75em;
+  list-style: none;
+  padding: 6px;
+}
+/* line 29, assetic_compassl6Hvor.scss */
+footer ul a {
+  color: #7f7f7f;
+}
+/* line 30, assetic_compassl6Hvor.scss */
+footer ul a:hover {
+  color: #323232;
+}
+
+/* line 34, assetic_compassl6Hvor.scss */
+footer ul:nth-child(2) li {
+  display: inline;
+  margin: 10px 0;
+  opacity: .6;
+  padding: 15px;
+}
+/* line 39, assetic_compassl6Hvor.scss */
+footer ul:nth-child(2) li:hover {
+  opacity: 1;
+}
+
+/* line 43, assetic_compassl6Hvor.scss */
+address {
+  margin-bottom: 20px;
+}

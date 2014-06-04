@@ -3,9 +3,9 @@
 @import "colors";
 
 footer {
-  @include bg-blue;
+  background-color: $color-black;
   bottom: 0;
-  color: $color-grey-4;
+  color: $color-blue;
   font-family: $regular;
   height: 140px;
   line-height: 140px;
@@ -18,19 +18,21 @@ footer {
   }
 }
 
-footer ul {
+footer ul:nth-child(1) {
   display: inline;
   vertical-align: middle;
+  margin-bottom:10px;
   li {
     font-size: $font-small;
     list-style: none;
     padding: 6px;
   }
-  a { color: $color-grey-4; }
-  a:hover { color: $color-selected; }
+  a { color: $color-blue; }
+  a:hover { color: $color-selected;border-bottom:1px solid $color-blue; }
 }
 
 footer ul:nth-child(2) {
+  margin-top: 10px;
   li {
     display: inline;
     margin: 10px 0;
@@ -40,4 +42,4 @@ footer ul:nth-child(2) {
  }
 }
 
-address { margin-bottom: 20px; }
+address { margin-bottom: 30px; }
