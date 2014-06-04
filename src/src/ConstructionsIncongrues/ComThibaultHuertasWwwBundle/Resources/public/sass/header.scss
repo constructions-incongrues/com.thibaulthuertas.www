@@ -50,3 +50,23 @@
 }
 
 
+// Headroom.js
+
+section.nav, #contact {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.slideOutUp {
+  -webkit-animation-duration: 1s;
+    @include vendor-prefix(hyphens, auto)
+
+}
+
+.slideInDown {
+  -webkit-animation-duration: 250ms;
+    @include vendor-prefix(hyphens, auto)
+}
