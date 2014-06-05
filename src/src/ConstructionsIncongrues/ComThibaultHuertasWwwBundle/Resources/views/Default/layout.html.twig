@@ -18,16 +18,13 @@
 
   <link rel="icon" href="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/favicon.png') }}" />
 
-  {% stylesheets "components/captionss/captionss.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  {% stylesheets
+    "components/captionss/captionss.css"
+    "components/animate.css/animate.css"
+    filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
   <link rel="stylesheet" href="{{ asset_url }}"/>
   {% endstylesheets %}
-  {% stylesheets "components/animate.css/animate.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
-  <link rel="stylesheet" href="{{ asset_url }}"/>
-  {% endstylesheets %}
-  {% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/sass/*.scss" filter="compass,cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
-  <link rel="stylesheet" href="{{ asset_url }}"/>
-  {% endstylesheets %}
-  {% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/css/*.css" filter="cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/*.css" %}
+  {% stylesheets "bundles/constructionsincongruescomthibaulthuertaswww/sass/*.scss" filter="compass,cssrewrite" output="bundles/constructionsincongruescomthibaulthuertaswww/compiled/main.css" %}
   <link rel="stylesheet" href="{{ asset_url }}"/>
   {% endstylesheets %}
   <script src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/js/libs/modernizr-2.0.6.min.js') }}"></script>
