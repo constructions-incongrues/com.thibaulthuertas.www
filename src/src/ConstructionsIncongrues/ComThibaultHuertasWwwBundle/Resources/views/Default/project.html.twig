@@ -24,11 +24,6 @@
 
       </a>
     </li>
-    {% else %}
-    <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/projets-nav--left.png') }}" />
-    </li>
-
     {% endif %}
     <li>
       <a href="{{ path('homepage') }}#projects" title="Retourner à la liste des projets">
@@ -40,10 +35,6 @@
       <a href="{{ path('project_show', {slug: projectNext.slug}) }}" title="Voir le projet {{ projectNext.title }}">
         <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/projets-nav-right.png') }}" />
       </a>
-    </li>
-    {% else %}
-    <li>
-      <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/img/icon/projets-nav-right.png') }}" />
     </li>
     {% endif %}
   </ul>
