@@ -33,7 +33,6 @@ class DefaultController extends Controller
                 $this->get('kernel')->locateResource('@ConstructionsIncongruesComThibaultHuertasWwwBundle/Resources/public/assets/projects/'.$project->getSlug());
                 $projectsExisting[] = $project;
             } catch (\InvalidArgumentException $e) {
-
             }
         }
 

@@ -21,7 +21,7 @@
   <article>
     <a href="{{ path('project_show', {slug: project.slug}) }}" title="En savoir plus sur le projet {{ project.title }}">
       <figure class="overlay reveal-smooth huertas">
-        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}" />
+        <img src="{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.gif') }}" onerror="this.src='{{ asset('bundles/constructionsincongruescomthibaulthuertaswww/assets/projects/' ~ project.slug ~ '/' ~ project.slug ~ '_home.png') }}'" />
         <figcaption>
         <div class="details">
             <h1>{{ project.title }}</h1>

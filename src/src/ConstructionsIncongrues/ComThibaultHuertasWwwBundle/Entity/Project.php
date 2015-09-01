@@ -48,7 +48,7 @@ class Project
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -64,14 +64,14 @@ class Project
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
 
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -87,14 +87,14 @@ class Project
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -110,14 +110,14 @@ class Project
     public function setSlug($slug)
     {
         $this->slug = $slug;
-        
+
         return $this;
     }
 
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -133,14 +133,14 @@ class Project
     public function setCredits($credits)
     {
         $this->credits = $credits;
-    
+
         return $this;
     }
 
     /**
      * Get credits
      *
-     * @return string 
+     * @return string
      */
     public function getCredits()
     {
@@ -156,14 +156,14 @@ class Project
     public function setDateReleased($dateReleased)
     {
         $this->date_released = $dateReleased;
-    
+
         return $this;
     }
 
     /**
      * Get date_released
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDateReleased()
     {
@@ -179,14 +179,14 @@ class Project
     public function setHover($hover)
     {
         $this->hover = $hover;
-    
+
         return $this;
     }
 
     /**
      * Get hover
      *
-     * @return string 
+     * @return string
      */
     public function getHover()
     {
@@ -197,13 +197,14 @@ class Project
      * Returns project's related images.
      *
      * @return Symfony\Component\Finder\Finder
-     */ 
+     */
     public function getImages()
     {
         $finder = new Finder();
         $images = $finder
             ->files()
             ->notName('*_home.png')
+            ->notName('*_home.gif')
             ->sortByName()
             ->in(__DIR__.'/../Resources/public/assets/projects/'.$this->getSlug());
 
@@ -224,14 +225,14 @@ class Project
     public function setIsEnabled($isEnabled)
     {
         $this->is_enabled = $isEnabled;
-    
+
         return $this;
     }
 
     /**
      * Get is_enabled
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getIsEnabled()
     {
